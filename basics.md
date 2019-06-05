@@ -18,16 +18,18 @@ GCP trial ends on June 05, 2020
 1. create a VM instance
 go to compute engine > VM instances > create
 I see below details. found that pricing depends on region, machine type, boot disk storage space (min is 10 GB)
-region
+region - choosing the region, consider where do we expect the user traffic to come from, consider govt regulations about data storage location
 zone
-machine type
+machine type - typically standard, high memory, high CPU and shared-core are the broad categories
 container
 boot disk
 access scope
-firewall
+firewall - http/https
 security
 networking
 sole tenancy
+
+* Premptible instance - will definitely be terminated after running for 24 hours. the cost is much less than regular VMs, makes sense in a fault-tolerant cluster. they will be forcibly restarted during maintenance
 
 the top level billing unit of GCP is a project
 learn to use cloud-shell - glcoud command tools
@@ -44,3 +46,74 @@ we can use gcloud from browser, or even better to download gcloud sdk locally
 # CAUTION:
 An important note for anyone learning a cloud technology like GCP - please be sure to delete your projects, instances and in general to free up your resources after you are done using them. Resources like BigTable, Cloud Spanner are pretty expensive - if you happen to create one, then forget to free it up, you could be hit with real sticker shock when you get your next invoice.
 
+# Compute Options
+
+app engine - PaaS offering, serverless and ops-free
+compute engine - IaaS offering, fully controllable down to OS
+  google cloud launcher
+  cost estimate before deployment
+  provides full control
+  
+container engine - cluster of machines running in kubernetes
+heroku is an example PaaS offering
+
+example use-case:
+setup a website or web app
+  1. static html, no SSL
+  (*Note: SSL (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral. SSL is an industry standard and is used by millions of websites in the protection of their online transactions with their customers.*)
+  Just buy storage to host these files (autoscaling included) - create a cloud storage bucket in gcp
+  
+  2. SSL, HTTPS, CDN
+  (*A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content. A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.*)
+  Use firebase hosting+cloud storage
+  3. need to add load balancing, scaling
+  
+run a hadoop cluster
+run a tensolflow model
+
+# Storage Options
+
+arranged in the order of pricing low to high:
+cloud storage buckets (cheapest)
+standard persistent disks
+solid state disks
+local SSDs
+
+# Load Balancing options
+
+network load balancing
+http load balancing
+[OSI stack](https://en.wikipedia.org/wiki/OSI_model)
+
+# DevOps
+
+# Availability Policies
+Preemptive VM
+automatic restart
+migrate to another VM
+
+Service accounts
+to change machine type, VM has to be stopped and restarted
+a zone can not be changed once a VM is created
+
+Labels: logical grouping, useful for reviewing usage pattern and other stuff
+get the gcloud script from UI and use that in cloud shell
+default values can be configured, which would be used when creating new VM instances
+If a new disk need to be attached, it should be in the same zone (to that of the VM instance)
+
+# container vs VMs
+container disks are ephemeral, they are lost when a container is restarted
+load balancing can be difficult in container engine
+
+GKE - google kubernetes engine 
+GCE - google container engine
+
+# Autoscaling
+
+# Google Cloud Dataproc
+managed spark/hadoop cluster
+
+
+
+# create a VM from gcloud
+# create and attach a persistent disk from gcloud
