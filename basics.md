@@ -72,7 +72,17 @@ run a hadoop cluster
 run a tensolflow model
 
 ### kubernetes and containers
-kubernetes running on master node, managing multiple node instances, each node instance runs a kubelet, which in turn runs a pod. each pod contain multiple containers (docker e.g.)
+1. kubernetes running on master node, managing multiple node instances, each node instance runs a kubelet, which in turn runs a pod. each pod contain multiple containers (docker e.g.). a container cluster is basically a group of Compute Engine VMs running kubernetes.
+2. container disks are ephemeral (temporary), to achieve persistent disk, use abstraction of gcePersistentDisk
+3. network level load balancing is available OOTB, but not http load balancing
+4. Each node runs docker runtime, and hosts a kubelet agent
+5. master runs kubernetes api
+6. nodepool- subset of machines within a cluster having same configuration
+7. container builder
+8. container registry- private registry of docker images
+9. autoscaling
+
+
 
 # Storage Options
 
