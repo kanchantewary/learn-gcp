@@ -131,3 +131,7 @@ Standard - basically a preinstalled container engine
 Flexible - basically a compute engine environment (VM), more choices, can be customized
 cloud functions - written in js, runs on node.js runtime
 
+# Install google cloud sdk in ubuntu
+
+https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
+
