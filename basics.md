@@ -159,6 +159,15 @@ get the ingress ip from the response of below code (load balancer should be depl
 kubectl describe services wordpress
 view the ip from a browser
 
+scale the app we just created
+kubectl scale deployment wordpress --replicas 3
+kubectl get service wordpress
+kubectl set image deployment wordpress wordpress=tutum/wordpress:2.0
+kubectl get pods
+
+at end end, delete the cluster created
+gcloud container clusters delete my-first-cluster
+
 # App engine (serverless and ops-free)
 use for hosting highly available applications (examples can be web apps, mobile applications, gaming backends, REST APIs)
 Environments: 
