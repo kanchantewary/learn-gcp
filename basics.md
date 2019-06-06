@@ -160,7 +160,6 @@ cloud functions - written in js, runs on node.js runtime
 
 https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
 
-<<<<<<< HEAD
 # to ssh into a vm instance
 gcloud compute ssh my-test-vm
 
@@ -186,4 +185,7 @@ https://cloud.google.com/sdk/gcloud/reference/
 ## delete a vm instance
 gcloud compute instances delete example-instance [example-instance-2 example-instance-3..]
 
->>>>>>> 4f51d5ed2472c7b652ba2166a3453460634bfee3
+# Install google cloud sdk in ubuntu
+
+https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
+
