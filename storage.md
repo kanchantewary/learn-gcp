@@ -1,0 +1,2 @@
+# GCP storage
+Block Storage
