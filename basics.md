@@ -76,7 +76,7 @@ run a tensolflow model
 arranged in the order of pricing low to high:
 cloud storage buckets (cheapest)
 standard persistent disks
-solid state disks
+solid state disks (SSD persistent disks)
 local SSDs
 
 # Load Balancing options
@@ -114,6 +114,15 @@ GCE - google container engine
 managed spark/hadoop cluster
 
 
+# Tutorials
+## create a VM from gcloud
+## create and attach a persistent disk from gcloud
+## create a small python-based app and run in app engine
 
-# create a VM from gcloud
-# create and attach a persistent disk from gcloud
+# App engine (serverless and ops-free)
+use for hosting highly available applications (examples can be web apps, mobile applications, gaming backends, REST APIs)
+Environments: 
+Standard - basically a preinstalled container engine
+Flexible - basically a compute engine environment (VM), more choices, can be customized
+cloud functions - written in js, runs on node.js runtime
+
