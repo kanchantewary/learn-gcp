@@ -150,3 +150,7 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 
 # gcloud reference
 https://cloud.google.com/sdk/gcloud/reference/
+
+## delete a vm instance
+gcloud compute instances delete example-instance [example-instance-2 example-instance-3..]
+
