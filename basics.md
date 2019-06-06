@@ -75,8 +75,8 @@ run a tensolflow model
 
 arranged in the order of pricing low to high:
 cloud storage buckets (cheapest)
-standard persistent disks
-solid state disks (SSD persistent disks)
+standard persistent disks - max size 65536 GB
+solid state disks (SSD persistent disks) - max size 65536 GB
 local SSDs
 
 # Load Balancing options
@@ -116,6 +116,11 @@ managed spark/hadoop cluster
 
 # Tutorials
 ## create a VM from gcloud
+gcloud compute --project=chromatic-being-242810 instances create my-test-vm --zone=us-central1-a --machine-type=f1-micro --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=609190896761-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --tags=https-server --image=ubuntu-1804-bionic-v20190530 --image-project=ubuntu-os-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=my-test-vm
+
+gcloud compute --project "chromatic-being-242810" ssh --zone "us-central1-a" "my-first-vm"
+
+
 ## create and attach a persistent disk from gcloud
 ## create a small python-based app and run in app engine
 
