@@ -18,4 +18,19 @@ BigTable - columnar data store, like HBase, good for sparse data
  single API for all storage classes
  aspects to consider: scalability, availability, consistency
  access methods: console/gsutil
+
+# Tutorial
+gcloud auth login
+gsutil mb -c regional -l us-central1 gs://ktewary-reg-bucket01
+gsutil mb -c regional -l us-central1 gs://ktewary-us-bucket01
+gsutil cp basics.md gs://ktewary-us-bucket01
+gsutil cp README.md gs://ktewary-reg-bucket01
+gsutil cp -r gs://ktewary-reg-bucket01 gs://ktewary-us-bucket01/
+gsutil ls gs://ktewary-us-bucket01/ 
+gsutil rm -r gs://ktewary-reg-bucket01
+gsutil ls
+gsutil rm -r gs://ktewary-us-bucket01/ktewary-reg-bucket01/
+gsutil acl ch -u AllUsers:R gs://ktewary-us-bucket01/basics.md
+gsutil acl ch -d AllUsers gs://ktewary-us-bucket01/basics.md
+gsutil lifecycle get gs://ktewary-us-bucket01
  
