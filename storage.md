@@ -19,6 +19,13 @@ BigTable - columnar data store, like HBase, good for sparse data
  aspects to consider: scalability, availability, consistency
  access methods: console/gsutil
 
+# Transfer service
+transfer from AWS S3, http/https location, local file path
+features:
+one time, recurring transfer
+delete from destination if they do not exist in source 
+periodic sync-up
+
 # Tutorial
 log into gcloud  
 `gcloud auth login`  
@@ -43,4 +50,6 @@ remove the acess
 `gsutil acl ch -d AllUsers gs://ktewary-us-bucket01/basics.md`  
 check the existing lifecycle policy  
 `gsutil lifecycle get gs://ktewary-us-bucket01`  
- 
+appy a new cifecycle policy  
+`gsutil lifecycle set kt-us-lifecycle-policy.json gs://ktewary-us-bucket01`  
+`gsutil lifecycle get gs://ktewary-us-bucket01`  
