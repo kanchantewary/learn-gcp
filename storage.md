@@ -21,26 +21,26 @@ BigTable - columnar data store, like HBase, good for sparse data
 
 # Tutorial
 log into gcloud  
-`gcloud auth login`
+`gcloud auth login`  
 create a bucket with regional storage class. bucket name has to be universally unique  
-`gsutil mb -c regional -l us-central1 gs://ktewary-reg-bucket01`
-`gsutil mb -c regional -l us-central1 gs://ktewary-us-bucket01`
+`gsutil mb -c regional -l us-central1 gs://ktewary-reg-bucket01`  
+`gsutil mb -c regional -l us-central1 gs://ktewary-us-bucket01`  
 copy a local file to the bucket  
-`gsutil cp basics.md gs://ktewary-us-bucket01`
-`gsutil cp README.md gs://ktewary-reg-bucket01`
+`gsutil cp basics.md gs://ktewary-us-bucket01`  
+`gsutil cp README.md gs://ktewary-reg-bucket01`  
 copy from one bucket to another recursively (-r)  
-`gsutil cp -r gs://ktewary-reg-bucket01 gs://ktewary-us-bucket01/`
+`gsutil cp -r gs://ktewary-reg-bucket01 gs://ktewary-us-bucket01/`  
 list files inside a bucket  
-`gsutil ls gs://ktewary-us-bucket01/`
+`gsutil ls gs://ktewary-us-bucket01/`  
 remove a bucket and it's content recursively  
-`gsutil rm -r gs://ktewary-reg-bucket01`
+`gsutil rm -r gs://ktewary-reg-bucket01`  
 list the available buckets  
-`gsutil ls`
-gsutil rm -r gs://ktewary-us-bucket01/ktewary-reg-bucket01/
+`gsutil ls`  
+`gsutil rm -r gs://ktewary-us-bucket01/ktewary-reg-bucket01/`  
 provide read access to all users to a file  
-`gsutil acl ch -u AllUsers:R gs://ktewary-us-bucket01/basics.md`
+`gsutil acl ch -u AllUsers:R gs://ktewary-us-bucket01/basics.md`  
 remove the acess  
-`gsutil acl ch -d AllUsers gs://ktewary-us-bucket01/basics.md`
+`gsutil acl ch -d AllUsers gs://ktewary-us-bucket01/basics.md`  
 check the existing lifecycle policy  
-`gsutil lifecycle get gs://ktewary-us-bucket01`
+`gsutil lifecycle get gs://ktewary-us-bucket01`  
  
