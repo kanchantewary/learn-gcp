@@ -1,0 +1,7 @@
+[
+  {
+    "email": "ktewary-dev@chromatic-being-242810.iam.gserviceaccount.com",
+    "entity": "user-ktewary-dev@chromatic-being-242810.iam.gserviceaccount.com",
+    "role": "OWNER"
+  }
+]

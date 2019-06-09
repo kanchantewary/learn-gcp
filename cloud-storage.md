@@ -53,3 +53,29 @@ check the existing lifecycle policy
 appy a new cifecycle policy  
 `gsutil lifecycle set kt-us-lifecycle-policy.json gs://ktewary-us-bucket01`  
 `gsutil lifecycle get gs://ktewary-us-bucket01`  
+```
+ gsutil list -L -b gs://ktewary-us-bucket01/
+ gcloud init
+ gcloud auth activate-service-account --key-file credentials.json
+ gcloud init
+```
+
+# versioning
+
+```
+code goes here
+```
+
+# customer supplied encryption
+```
+```
+
+# directory sync
+```
+sync up local current directory(.) with bucket
+gsutil rsync -r . gs://ktewary-us-bucket01
+```
+
+# share a bucket across projects
+```
+```
