@@ -18,6 +18,11 @@ does not support index(except on rowkey) or constraints. so fundamentally, all r
 
 ## data layout
 column families - refers to table basically, set of logically related columns, it also acts like a namespace (a column should be specified along with it's column family)
-each column family is stored in separate data file
+each column family is stored in separate data file. column families should be specified during schema definition time (they can not be created on the fly)
+
+any value can be uniquely identified using row key, column family, column and timestamp(version) (4 dimensions). if timestamp is not mentioned, latest is returned by default.
+a row key can be primitive data types as well as struct or array. internally stored as byte array. stored in ascending sort order.
+
+## performance
 
 
