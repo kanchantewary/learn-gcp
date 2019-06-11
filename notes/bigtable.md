@@ -26,3 +26,18 @@ a row key can be primitive data types as well as struct or array. internally sto
 ## performance
 
 
+# HBase commands - basics
+```
+list #lists all tables
+create 'test','cf' #creates a table test, with column family named cf
+list 'test' #lists table test, basically tells if the table exist
+describe 'test'
+put 'test', 'row1', 'cf:a', 'value1'
+put 'test', 'row2', 'cf:b', 'value2'
+put 'test', 'row3', 'cf:c', 'value3'
+scan 'test' #scan the table for data
+get 'test', 'row1' # return single row at a time
+disable 'test' # disable a table
+enable 'test' # enable a table
+drop 'test' # drop a table
+```
