@@ -2,6 +2,7 @@
 Google Cloud Platform - data engineer ceritification
 
 ## Resources
+https://cloud.google.com/certification/guides/data-engineer/
 https://cloud.google.com/training/data-ml  
 https://www.qwiklabs.com/  
 https://learning.oreilly.com/videos/gcp-complete-google/9781788999519  
