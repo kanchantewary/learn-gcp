@@ -1,5 +1,5 @@
 # Dataproc
-managed version of hadoop+spark+ive+pig
+managed yarn service
 no ops, create cluster, use it, turn it off
 existing hadoop code can be moved to cloud
 built using compute engine VMs - at least 1 master and 2 workers
