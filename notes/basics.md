@@ -209,5 +209,18 @@ gcloud compute instances delete example-instance [example-instance-2 example-ins
 
 https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
 
-# more lines goes here
-# even more lines goes here
+# Big Data, Business Intelligence
+- BigQuery
+- BigTable
+- Cloud DataFlow
+- Cloud DataProc
+- Cloud Data Fusion
+- Cloud DataPrep
+- Data Catalog
+- Data Studio
+- Cloud Pub/Sub
+
+# AI and ML
+- TensorFlow
+- 
+
