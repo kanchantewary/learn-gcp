@@ -1,28 +1,26 @@
-# GCP basics - udemy training by loonycorn 
+# GCP basics
 driver --> configuring cluster of distributed machines is complicated and expensive
 
-# Certifications
-## GCP data engineer
-big data(bigquery, dataflow, pub/sub), storage(cloud storage, cloud SQL, bigtable, datastore), 
-ML(concepts, tensorflow, cloudML)
-prerequisite - hadoop, MR, spark in depth
-hive,hbase,pig fundamentals
+## Compute Engine
+A  project can have upto 5 VPC instances. Each compute engine instance belongs to one VPC network
+To create a VM instance, go to compute engine > VM instances > create. Pricing depends on region, machine type, boot disk storage space (min is 10 GB)
 
-## GCP cloud architect courses
-easier, more theoretical, compute choices (app engine, compute engine, container engine), 
-network, security, deployment, logging and monitoring (stackdriver)
-Advise - do not prepare to the test
-
-GCP trial ends on June 05, 2020
-
-1. create a VM instance
-go to compute engine > VM instances > create
-I see below details. found that pricing depends on region, machine type, boot disk storage space (min is 10 GB)
 region - choosing the region, consider where do we expect the user traffic to come from, consider govt regulations about data storage location
 zone
-machine type - typically standard, high memory, high CPU and shared-core are the broad categories
-container
-boot disk
+### machine type
+A machine type specifies a particular collection of virtualized hardware resources available to a virtual machine (VM) instance, including the system memory size, virtual CPU (vCPU) count, and maximum persistent disk capability. typically standard, high memory, high CPU, shared-core, memory-optimized are the broad categories. 
+
+standard - 
+High memory - High-memory machine types have 6.50GB of system memory per vCPU. 
+Memory optimized - Memory-optimized machine types have greater than 14 GB of memory per vCPU. These machines types are perfectly suited for in-memory databases and in-memory analytics, such as SAP Hana and business warehousing (BW) workloads, genomics analysis, SQL analysis services, and more. 
+High CPU - High-CPU machine types are ideal for tasks that require more vCPUs relative to memory. High-CPU machine types have 0.90 GB of memory per vCPU.
+
+If none of the predefined machine types match your needs, you can independently specify the number of vCPUs and the amount of memory for your instance.
+
+GPU - You can attach GPUs only to instances with a predefined machine type or custom machine type that you are able to create in a zone. GPUs are not supported on shared-core machine types or memory-optimized machine types.
+
+container - When creating a VM or an instance template, you can provide a Docker image name and launch configuration. Compute Engine will take care of the rest including supplying an up-to-date Container-Optimized OS image with Docker installed and launching your container when the VM starts up.
+boot disk - persistent boot disk, which contains the OS
 access scope
 firewall - http/https
 security
