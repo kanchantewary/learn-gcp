@@ -225,4 +225,4 @@ https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
 - 
 
 - GCP BI solution architecture
-![]()
+![](gcp-bi-soln-architecture.png)
