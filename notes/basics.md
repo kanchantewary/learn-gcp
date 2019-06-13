@@ -224,5 +224,6 @@ https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
 - TensorFlow
 - 
 
-- GCP BI solution architecture
+# GCP BI solution architecture
+
 ![](gcp-bi-soln-architecture.png)
