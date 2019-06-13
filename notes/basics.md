@@ -1,12 +1,15 @@
 # GCP basics
-driver --> configuring cluster of distributed machines is complicated and expensive
+driver --> configuring cluster of distributed machines is complicated and expensive. 
+
+The idea is, use a compute engine VM, run the application, create the file we need and store it in cloud storage, and then get rid of the VM (STOP or DELETE). data and compute are independent.
 
 ## Compute Engine
 A  project can have upto 5 VPC instances. Each compute engine instance belongs to one VPC network
 To create a VM instance, go to compute engine > VM instances > create. Pricing depends on region, machine type, boot disk storage space (min is 10 GB)
 
 region - choosing the region, consider where do we expect the user traffic to come from, consider govt regulations about data storage location
-zone
+zone - multiple zones are available inside a region
+
 ### machine type
 A machine type specifies a particular collection of virtualized hardware resources available to a virtual machine (VM) instance, including the system memory size, virtual CPU (vCPU) count, and maximum persistent disk capability. typically standard, high memory, high CPU, shared-core, memory-optimized are the broad categories. 
 
