@@ -10,6 +10,7 @@
   - Capacity scheduler
   - Fair scheduler
 ## Hive
+open source data warehouse system built on top of Hadoop Haused for querying and analyzing large datasets stored in Hadoop files
 ## Pig
 - available in dataproc
 - works well with unstructured, incomplete data
