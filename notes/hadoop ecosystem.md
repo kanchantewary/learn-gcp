@@ -14,5 +14,10 @@
 - available in dataproc
 - works well with unstructured, incomplete data
 - can work directly on files in hdfs
-- Pig Latin is a procedural language for ETL tasks
-- 
+- Pig Latin is a procedural language (like SQL) for ETL tasks
+- Following are the major components
+  - Parser
+  - Optimizer
+  - Compiler
+  - Execution Engine
+    - submitted to hadoop as mapreduce jobs
