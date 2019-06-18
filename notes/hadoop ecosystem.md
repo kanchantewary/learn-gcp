@@ -11,3 +11,8 @@
   - Fair scheduler
 ## Hive
 ## Pig
+- available in dataproc
+- works well with unstructured, incomplete data
+- can work directly on files in hdfs
+- Pig Latin is a procedural language for ETL tasks
+- 
