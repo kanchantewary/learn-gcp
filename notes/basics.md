@@ -12,6 +12,48 @@ Refer this [link](https://www.vgyan.in/type-1-and-type-2-hypervisor/)
 - type 1 hypervisor - run directly on system hardware (native or bare-metal). best for scalability, security and performance (GCP uses this)
 - type 2 hypervisor - examples like oracle virtual box or vmware player, less scalable and less secure. the hypervisor would run inside the host operating system
 
+Learn these words:
+- scalability
+- availability
+- durability
+- latency
+
+## Cloud Service Types
+
+- content delivery networking - get the content as closer as possible to the customer
+- IAAS (infrastructure as a service)
+- PAAS (platform as a service)
+- SAAS (software as a service)
+- DBAAS (database as a service)
+- CAAS (container as a service)
+- FAAS (function as a service)
+- BPAAS (business process as a service)
+
+## Cloud Deployment Types
+
+determine residency, ownership and shared responsibilities. The deployment model chosen, would impact the following:
+- cost and budgeting
+- risk
+- resource allocation
+- business strategy
+- governance, regulations (GDPR, HIPAA, serbans-oxley e.g.)
+
+Options:
+- private cloud deployment
+  - may be on-premise or off-premise
+- community cloud deployment
+- public cloud deployment
+- hybrid cloud deployment
+
+GCP services can be classified into following broad categories:
+a. computing and hosting services - GCE, understand fundamental choices to make, given a use-case
+b. storage services
+  - cloud SQL - google managed VM hosted on GCE, running MySQL library
+  - cloud datastore - document database, non-relational. example use case is gmail
+  - cloud storage - similar to AWS S3, use buckets and objects, 4 storage classes
+c. network services
+d. big data services
+e. Machine learning services
 
 ## Compute Engine
 A  project can have upto 5 VPC instances. Each compute engine instance belongs to one VPC network
