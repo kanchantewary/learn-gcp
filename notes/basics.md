@@ -3,6 +3,16 @@ driver --> configuring cluster of distributed machines is complicated and expens
 
 The idea is, use a compute engine VM, run the application, create the file we need and store it in cloud storage, and then get rid of the VM (STOP or DELETE). data and compute are independent.
 
+## Virtualization
+virtualization can be considered as a process of creating abstractions to computing/storage resources (in this context), e.g. partitioning a hard-drive is a form of virtualization. virtual machines, networks, switches, routers are all example of virtualization.
+Refer this [link](https://www.vgyan.in/type-1-and-type-2-hypervisor/)
+- hypervisor
+- paravirtualization
+- hardware-assisted virtualization
+- type 1 hypervisor - run directly on system hardware (native or bare-metal). best for scalability, security and performance (GCP uses this)
+- type 2 hypervisor - examples like oracle virtual box or vmware player, less scalable and less secure. the hypervisor would run inside the host operating system
+
+
 ## Compute Engine
 A  project can have upto 5 VPC instances. Each compute engine instance belongs to one VPC network
 To create a VM instance, go to compute engine > VM instances > create. Pricing depends on region, machine type, boot disk storage space (min is 10 GB)
