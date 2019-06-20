@@ -262,21 +262,23 @@ gcloud compute instances delete example-instance [example-instance-2 example-ins
 https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
 
 # Big Data, Business Intelligence
-- BigQuery
+- BigQuery - serverless EDW solution
 - BigTable
-- Cloud DataFlow
+- Cloud DataFlow - serverless, managed service for batch and real-time data
 - Cloud DataProc
 - Cloud Data Fusion
 - Cloud DataPrep
 - Data Catalog
 - Data Studio
-- Cloud Pub/Sub
+- Cloud Pub/Sub - streaming 
+- cloud datalab - interactive, built on jupyter
 
-# AI and ML
+# Machine Learning Services
+one of google's core services. workflows involve training a model and then predicting using the model
+- AutoML - suite of ML products. AutoML API is there. natural language, translation
 - TensorFlow
 - 
 
 # GCP BI solution architecture
 
-![](gcp-bi-soln-architecture.png)
 
