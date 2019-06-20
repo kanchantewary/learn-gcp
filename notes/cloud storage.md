@@ -1,6 +1,6 @@
 # GCP storage
 - Block Storage - storage for compute VMs, no abstraction is used, examples are persistent disks (standard or SSD)  
-- Cloud Storage - buckets to store data, bucket names are globally unique  
+- Cloud Storage - buckets to store data, bucket names are globally unique. 3 components - data or content object, an unique identifier and metadata. maintains file revisions  
   - multi-regional - very frequently accessed, geo-redundant, highly available, most expensive  
   - regional - data stored in a geographic region, lower in cost, appropriate for compute VMs  
   - nearline - slighly lower availability, use for data backup, archival or disaster recovery, 30 day minimum storage, access once a month max  
