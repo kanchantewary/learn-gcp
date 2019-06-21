@@ -80,3 +80,30 @@ gsutil rsync -r . gs://ktewary-us-bucket01
 # share a bucket across projects
 ```
 ```
+## 8 steps for planning/estimating
+1. plan the hierarchy
+org>team folders>projects>resources
+  - consider team structure
+  - consider how the billing would be organized, separate or unified
+  - any governance/regulation requirements
+
+2. designate project structure
+  - control the scope of projects. single project containing multiple apps, or a single app spanning multiple projects
+  - resources can be spread across multiple regions and geographies
+  
+3. automate project creation using templates
+  - offers a consistency, reproducibility, testability
+  - also called configuration as code or infrastructure as code
+  - consistent naming and labeling across projects
+  - it simplifies code refactoring (refer footnote)
+  - use cloud deployment manager, ansible,teraform,
+4. use IAM best practices
+5. networking and security practices
+6. logging, monitoring, operations
+7. cloud architecture practices
+8. billing and management practices
+
+also refer [platform launch checklist](https://cloud.google.com/docs/platform-launch-checklist)
+
+## Footnotes:
+- Code refactoring is the process of restructuring existing computer code – changing the factoring – without changing its external behavior. */Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which “too small to be worth doing”. However the cumulative effect of each of these transformations is quite significant/* ~Martin Fowler
