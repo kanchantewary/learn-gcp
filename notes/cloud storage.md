@@ -96,7 +96,7 @@ org>team folders>projects>resources
   - also called configuration as code or infrastructure as code
   - consistent naming and labeling across projects
   - it simplifies code refactoring (refer footnote)
-  - use cloud deployment manager, ansible,teraform,
+  - use cloud deployment manager or 3rd party tools like [ansible](https://www.ansible.com/),[teraform](https://www.terraform.io/) or [puppet](https://puppet.com/)
 4. use IAM best practices
 5. networking and security practices
 6. logging, monitoring, operations
@@ -107,3 +107,5 @@ also refer [platform launch checklist](https://cloud.google.com/docs/platform-la
 
 ## Footnotes:
 - Code refactoring is the process of restructuring existing computer code – changing the factoring – without changing its external behavior. */Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which “too small to be worth doing”. However the cumulative effect of each of these transformations is quite significant/* ~Martin Fowler
+
+- [chef](https://www.chef.io/partners/google-cloud-platform/)
