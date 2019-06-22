@@ -174,7 +174,7 @@ content serving - common setups
  
 # Block Storage
 
-Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM file storage. data is always fully-encrypted.
+Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM file storage. data is always fully-encrypted (google-managed-key/customer-managed-key/customer-supplied-key). For customer-managed keys, refer Google Cloud Key Management Service (KMS) API.
 
 ### Types
 - local SSD
@@ -183,7 +183,7 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
   - highest performance
   - 3 TB max size
   
-- standard Persistent disk
+- standard(HDD) Persistent disk
   - highly durable
   - high performance
   - lower in cost
@@ -191,6 +191,7 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
   - zone has to be same as the VM
   - multiple replicas are maintained under the zone, to deliver high availability
   - no need to strip disks, a large drive works the same way like multiple disks of same volume (to the user). best practice is start small and then keep adding as requirement grows.
+  - physical block size is 4 KB (default) or 16.
 - SSD persistent disk (PD-SSD)
   - ultra-high performance, low latency
   - cost is more
@@ -208,11 +209,25 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
 - automatic encryption
 - dynamic scaling (while it is attached)
 - snapshot scheduling - define creation policy, retention policy
-- snapshot location (for regulatory requirements e.g.) - select GCS buckets as targets
-- regional persistent disk
+- snapshot location (for regulatory requirements e.g.) - select GCS buckets as targets, snapshots can be regional or multi-regional, schedule frequency (hourly/daily/monthly)
+- regional persistent disk - provide durable storage and replication of data between two zones in the same region. Designed for workloads that require redundancy across multiple zones with failover capabilities.
 - 64 TB max size
+- while creating a persistent disk, gcp can source from an existing image or a snapshot specified
 
 ### performance recommendations
+
+
+### Tutorial
+
+gcloud commands to create a standard pd, add an image, create a snapshot scedule and attach that.
+
+```
+gcloud beta compute disks create test --project=chromatic-being-242810 --type=pd-standard --description=my\ test\ pd --size=30GB --zone=us-central1-a --image=c0-deeplearning-common-cu100-20190611 --image-project=ml-images --physical-block-size=4096
+
+gcloud beta compute resource-policies create-snapshot-schedule schedule-1 --project=chromatic-being-242810 --region=us-central1 --max-retention-days=14 --on-source-disk-delete=apply-retention-policy --weekly-schedule-from-file=SCHEDULE_FILE_PATH --guest-flush --storage-location=us-central1 --description=pd\ snapshot
+
+gcloud beta compute disks add-resource-policies test --project=chromatic-being-242810 --zone=us-central1-a --policies=projects/chromatic-being-242810/regions/us-central1/resourcePolicies
+```
 
 ### Footnote
 - DAS - direct attached storage - local disk drives which are installed internal to the server’s cabinet.  These drives are typically used to install the operating system and user applications. 
