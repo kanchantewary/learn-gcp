@@ -1,12 +1,12 @@
 # GCP storage
 - Cloud SQL
 - Block Storage - storage for compute VMs, no abstraction is used, examples are persistent disks (standard or SSD). does not have versioning. files are split up and stored in multiple fixed-sized blocks.
-- Cloud Storage - buckets to store data, bucket names are globally unique. 3 components - data or content object, an unique identifier and metadata. object names should be unique to the bucket. maintains file revisions. multiple access levels can be assigned. files are distributed across nodes.
-  - multi-regional - very frequently accessed, geo-redundant, highly available, most expensive  
-  - regional - data stored in a geographic region, lower in cost, appropriate for compute VMs  
-  - nearline - slighly lower availability, use for data backup, archival or disaster recovery, 30 day minimum storage, access once a month max  
-  - coldline - access once a year max, 90 day minimum storage, use for data related to legal or regulatory use  
- In google world, hdfs is replaced by cloud storage, since hdfs requires a name node running always  
+- Cloud Storage - buckets to store data, bucket names are globally unique. 3 components - data or content object, an unique identifier and metadata. object names should be unique to the bucket. maintains file revisions. multiple access levels can be assigned. files are distributed across nodes. 
+common usecases are 
+  - content storage and delivery
+  - compute, analytics and ML
+  - backup and archiving
+  
  - BigQuery - much faster than hive, can be used for real-time processing, does not enforce ACID property (so not for OLTP)  
  - Cloud Spanner - for OLTP, structured relational data, supports ACID property. not suitable for OLAP. supports strong consistency, horizontal scalability. use cloud spanner API to access it.
  - DataStore - NoSQL database, alternative to MongoDB or CouchDB. not for OLTP or OLAP. not for write intensive data. provides decent transaction support.  
@@ -133,6 +133,12 @@ labels
 multi-regional, dual-regional(beta), regional,nearline,coldline,standard storage, DRA(durable reduced availability)
 Refer this [documentation](https://cloud.google.com/storage/docs/storage-classes)
 
+storage classes:
+  - multi-regional - very frequently accessed, geo-redundant, highly available, most expensive  
+  - regional - data stored in a geographic region, lower in cost, appropriate for compute VMs  
+  - nearline - slighly lower availability, use for data backup, archival or disaster recovery, 30 day minimum storage, access once a month max  
+  - coldline - access once a year max, 90 day minimum storage, use for data related to legal or regulatory use  
+ In google world, hdfs is replaced by cloud storage, since hdfs requires a name node running always 
 # Footnote
 - DAS - direct attached storage - local disk drives which are installed internal to the server’s cabinet.  These drives are typically used to install the operating system and user applications. 
 - SAN - storage area networks - SANs require an infrastructure consisting of SAN switches, disk controllers, HBAs (host bus adapters) and fibre cables.  SANs leverage external RAID controllers and disk enclosures to provide high-speed storage for numerous potential servers.
