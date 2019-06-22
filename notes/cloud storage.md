@@ -135,9 +135,19 @@ org>team folders>projects>resources
 
 also refer [platform launch checklist](https://cloud.google.com/docs/platform-launch-checklist)
 
+## pricing Calculator
+budgeting, cost-benefit analysis. use it as a learning tool
+list the free products
+- compute engine: 
+- app engine: 
+- cloud storage
+- kubernetes engine
+
 ## Footnotes:
 - Code refactoring is the process of restructuring existing computer code – changing the factoring – without changing its external behavior. */Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which “too small to be worth doing”. However the cumulative effect of each of these transformations is quite significant/* ~Martin Fowler
 
 - [chef](https://www.chef.io/partners/google-cloud-platform/)
 
 - Site Reliability Engineering (SRE) - Site Reliability Engineering is a discipline that incorporates aspects of software engineering and applies them to infrastructure and operations problems. The main goals are to create ultra-scalable and highly reliable software systems. Refer [wikipedia](https://en.wikipedia.org/wiki/Site_Reliability_Engineering)
+
+- SKU - stock keeping unit
