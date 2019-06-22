@@ -178,6 +178,8 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
 - local SSD
   - co-located with VM
   - ephemeral
+  - highest performance
+  - 3 TB max size
   
 - standard Persistent disk
   - highly durable
@@ -194,7 +196,7 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
   - throughput is full duplex
 
 ### common patterns of persistent disk usage
-- root volume
+- root volume (boot device)
 - persistent data volume
 - instant distribution of static content
 - syncronous replication across zones
@@ -203,9 +205,10 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
 - share content across multiple VMs. Pd-SSD is recommended if we want to share a read-only pd to multiple VMs. for read-write file sharing, use firestore instead
 - automatic encryption
 - dynamic scaling (while it is attached)
-- snapshot scheduling - creation, retention policy
-- snapshot location (for regulatory requirements e.g.)
+- snapshot scheduling - define creation policy, retention policy
+- snapshot location (for regulatory requirements e.g.) - select GCS buckets as targets
 - regional persistent disk
+- 64 TB max size
 
 ### performance recommendations
 
