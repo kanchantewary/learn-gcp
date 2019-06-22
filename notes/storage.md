@@ -1,4 +1,5 @@
 # GCP storage
+## Basics
 - Cloud SQL
 - Block Storage - storage for compute VMs, no abstraction is used, examples are persistent disks (standard or SSD). does not have versioning. files are split up and stored in multiple fixed-sized blocks.
 - Cloud Storage - buckets to store data, bucket names are globally unique. 3 components - data or content object, an unique identifier and metadata. object names should be unique to the bucket. maintains file revisions. multiple access levels can be assigned. files are distributed across nodes. 
@@ -20,14 +21,14 @@ common usecases are
  aspects to consider: scalability, availability, consistency
  access methods: console/gsutil
 
-# Transfer service
+### Transfer service
 transfer from AWS S3, http/https location, local file path
 features:
 one time, recurring transfer
 delete from destination if they do not exist in source 
 periodic sync-up
 
-# Tutorial
+### Tutorial
 log into gcloud  
 `gcloud auth login`  
 create a bucket with regional storage class. bucket name has to be universally unique  
@@ -61,27 +62,28 @@ appy a new cifecycle policy
  gcloud init
 ```
 
-# versioning
+### versioning
 
 ```
 code goes here
 ```
 
-# customer supplied encryption
+### Encryption
 ```
 ```
 
-# directory sync
+### directory sync
 ```
 sync up local current directory(.) with bucket
 gsutil rsync -r . gs://ktewary-us-bucket01
 ```
 
-# share a bucket across projects
+### share a bucket across projects
 ```
 ```
-storage-choices.md
-# Planning the data storage options
+# Cloud storage (gcs)
+
+## Planning the data storage options
 Cloud storage use cases
 - media content storage and delivery e.g. 
   - streaming videos and music
@@ -98,7 +100,7 @@ Backups and archives
   - long term storage for retention policies based on regulations or mandates
   - digital forensics
 
-Migration strategies
+### Migration strategies
 - lift and shift
 - migrate and modernize
 - rebuild in the cloud
@@ -115,7 +117,7 @@ standard persistent disk
 
 another option: local ssd scratch disk
 
-# key features:
+### key features:
 durability - 
 scalability - 
 availability -
@@ -129,16 +131,47 @@ retention policy -
 access control model
 labels
 
-# Storage classes
+### Storage classes
 multi-regional, dual-regional(beta), regional,nearline,coldline,standard storage, DRA(durable reduced availability)
 Refer this [documentation](https://cloud.google.com/storage/docs/storage-classes)
 
-storage classes:
-  - multi-regional - very frequently accessed, geo-redundant, highly available, most expensive  
-  - regional - data stored in a geographic region, lower in cost, appropriate for compute VMs  
-  - nearline - slighly lower availability, use for data backup, archival or disaster recovery, 30 day minimum storage, access once a month max  
-  - coldline - access once a year max, 90 day minimum storage, use for data related to legal or regulatory use  
- In google world, hdfs is replaced by cloud storage, since hdfs requires a name node running always 
+storage cost decreases as we go down this list. multu-regional is highest
+
+- multi-regional - very frequently accessed, geo-redundant, highly available, most expensive. access price is free.
+- regional - data stored in a geographic region, lower in cost, appropriate for compute VMs. access price is free. 
+- nearline - slighly lower availability, use for data backup, archival or disaster recovery, 30 day minimum storage, access once a month max. there is access cost, but lower than coldline.
+- coldline - access once a year max, 90 day minimum storage, use for data related to legal or regulatory use. access cost is highest.
+
+### New approach (2019 next)
+Refer [here](https://youtu.be/mOHy6m8KzJk)
+
+Four storage classes: standard, nearline, coldline and archive. Each can have 3 location types: multi-region, dual-region or region
+
+content serving - common setups
+- Direct serving
+- cloud CDN
+- custom frontends
+- independent CDNs
+
+ In google world, hdfs is replaced by cloud storage, since hdfs requires a name node running always.
+ 
+ ### retries and failover best practices
+ - deadline- should not be too short or too long
+ - hedged requests
+ - limit your retry volume
+ - ensure sequences are idempotent
+ 
+### scaling
+- bucket sharding - try to distribute load evenly
+  - range based
+  - hash based
+- autoscaling
+- hotspotting
+-fragmentation
+-naming patterns which can cause problems distributing load
+ 
+# Block Storage
+
 # Footnote
 - DAS - direct attached storage - local disk drives which are installed internal to the server’s cabinet.  These drives are typically used to install the operating system and user applications. 
 - SAN - storage area networks - SANs require an infrastructure consisting of SAN switches, disk controllers, HBAs (host bus adapters) and fibre cables.  SANs leverage external RAID controllers and disk enclosures to provide high-speed storage for numerous potential servers.
