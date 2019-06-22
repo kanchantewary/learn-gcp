@@ -172,11 +172,52 @@ content serving - common setups
  
 # Block Storage
 
-# Footnote
+Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM file storage
+
+### Types
+- local SSD
+  - co-located with VM
+  - ephemeral
+  
+- standard Persistent disk
+  - highly durable
+  - high performance
+  - lower in cost
+- SSD persistent disk (PD-SSD)
+  - ultra-high performance, low latency
+  - cost is more
+  - used typically for databases, enterprise applications
+  - throughput is full duplex
+
+### common patterns of persistent disk usage
+- root volume
+- persistent data volume
+- instant distribution of static content
+- syncronous replication across zones
+
+### features
+- share content across multiple VMs. Pd-SSD is recommended if we want to share a read-only pd to multiple VMs. for read-write file sharing, use firestore instead
+- automatic encryption
+- dynamic scaling (while it is attached)
+- snapshot scheduling - creation, retention policy
+- snapshot location (for regulatory requirements e.g.)
+- regional persistent disk
+
+### performance recommendations
+
+### Footnote
 - DAS - direct attached storage - local disk drives which are installed internal to the server’s cabinet.  These drives are typically used to install the operating system and user applications. 
 - SAN - storage area networks - SANs require an infrastructure consisting of SAN switches, disk controllers, HBAs (host bus adapters) and fibre cables.  SANs leverage external RAID controllers and disk enclosures to provide high-speed storage for numerous potential servers.
 - NAS - network attached storage - This solution uses a dedicated server or “appliance” to serve the storage array.  The storage can be commonly shared to multiple clients at the same time across the existing Ethernet network. 
 
 Refer this [link](https://www.petri.com/das-nas-san-storage-technologies) for more details.
 
-- IOPS - IOPS (Input/Output Operations Per Second, pronounced i-ops) is a common performance measurement used to benchmark computer storage devices like hard disk drives (HDD), solid state drives (SSD), and storage area networks (SAN). 
+- IOPS - IOPS (Input/Output Operations Per Second, pronounced i-ops) is a common performance measurement used to benchmark computer storage devices like hard disk drives (HDD), solid state drives (SSD), and storage area networks (SAN). typically calculated as IOPS per GB of disk space. IOPS depend on 3 main components:
+  - spindle speed (rotation per minute or RPM)
+  - Average latency - The time it takes for the sector of the disk being accessed to rotate into position under a read/write head
+  - Average seek time - The time (in ms) it takes for the hard drive's read/write head to position itself over the track being read or written. There are both read and write seek times; take the average of the two values.
+  
+- RAID(Redundant Array of Inexpensive Disks) - RAID is a technology that is used to increase the performance and/or reliability of data storage. The abbreviation stands for Redundant Array of Inexpensive Disks. A RAID system consists of two or more drives working in parallel. These disks can be hard discs, but there is a trend to also use the technology for SSD (solid state drives). There are different RAID levels, each optimized for a specific situation.
+- SCSI - Small Computer System Interface
+- SATA - Serial ATA (~at attachment)
+- SAS - Serial Attached SCSI. SAS is a new generation serial communication protocol for devices designed to allow for much higher speed data transfers and is compatible with SATA
