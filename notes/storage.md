@@ -147,7 +147,8 @@ Refer [here](https://youtu.be/mOHy6m8KzJk)
 
 Four storage classes: standard, nearline, coldline and archive. Each can have 3 location types: multi-region, dual-region or region
 
-![](images/storage-classes-2019-next.png)
+"![storage classes](images/storage-classes-2019-next.png)"
+
 content serving - common setups
 - Direct serving
 - cloud CDN
