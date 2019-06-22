@@ -24,7 +24,7 @@ Migration strategies
 four phases:
 assess>plan>migrate>optimize
 
-[Refer this documentation(https://cloud.google.com/solutions/migration-center/)
+Refer this [documentation](https://cloud.google.com/solutions/migration-center/)
 
 Boot disk options:
 ssd persistent disk
@@ -48,6 +48,7 @@ labels
 
 # Storage classes
 multi-regional, dual-regional(beta), regional,nearline,coldline,standard storage, DRA(durable reduced availability)
+Refer this [documentation](https://cloud.google.com/storage/docs/storage-classes)
 
 # Footnote
 - DAS - direct attached storage - local disk drives which are installed internal to the server’s cabinet.  These drives are typically used to install the operating system and user applications. 
