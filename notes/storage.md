@@ -172,7 +172,7 @@ content serving - common setups
  
 # Block Storage
 
-Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM file storage
+Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM file storage. data is always fully-encrypted.
 
 ### Types
 - local SSD
@@ -183,6 +183,10 @@ Refer this [video](https://youtu.be/-Fkgp0pkSdc). Use block storage for local VM
   - highly durable
   - high performance
   - lower in cost
+  - not tied to the VM, many disks can be attached to a VM, only one read-write, but multiple read-only disks can be attached. Again, a RO PD can be attached to multiple VMs
+  - zone has to be same as the VM
+  - multiple replicas are maintained under the zone, to deliver high availability
+  - no need to strip disks, a large drive works the same way like multiple disks of same volume (to the user). best practice is start small and then keep adding as requirement grows.
 - SSD persistent disk (PD-SSD)
   - ultra-high performance, low latency
   - cost is more
