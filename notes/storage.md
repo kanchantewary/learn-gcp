@@ -1,6 +1,6 @@
 # GCP storage
 ## Basics
-![summary]()
+![summary](https://github.com/kanchantewary/learn-gcp/blob/master/images/gcp-storage-options-2019-next.png)
 - Cloud SQL
 - Block Storage - storage for compute VMs, no abstraction is used, examples are persistent disks (standard or SSD). does not have versioning. files are split up and stored in multiple fixed-sized blocks.
 - Cloud Storage - buckets to store data, bucket names are globally unique. 3 components - data or content object, an unique identifier and metadata. object names should be unique to the bucket. maintains file revisions. multiple access levels can be assigned. files are distributed across nodes. 
