@@ -3,6 +3,7 @@
 
 Rule #1: Don't be afraid to launch a product without machine learning
 Refer https://developers.google.com/machine-learning/glossary/#training
+Refer https://developers.google.com/machine-learning/problem-framing/cases
 
 Framing
 - supervised ML
