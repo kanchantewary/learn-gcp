@@ -30,3 +30,20 @@ partitioned tables
 query plan explanation is available
 - slots
 
+# coursera/qwiklabs
+- use console to query a public dataset (usa names)
+- create a dataset, create a empty table and/or upload a local file into the table (baby names). note that file format should be specified
+- supported file types: csv, avro, parquet, json, ORC
+- supported table types: native and external
+- write modes - write if empty/overwrite/append
+- error threshold can be defined in advanced options
+- dataset can be shared across (define IAM roles)
+- bigquery can be accessed from UI(console), command line, 3rd party tools or REST API calls
+- standard roles: 
+  - owner
+  - editor
+  - viewer
+  - bigquery admin
+  - bigquery data owner
+  - bigquery data editor
+  - bigquery user
