@@ -4,7 +4,9 @@
 - existing hadoop code can be moved to cloud
 - built using compute engine VMs - at least 1 master and 2 workers
 - preemptible instances is good choice, use for processing only, not for storage. All instances cant be preemptible (at least 2 - non-preemptible workers should be there. master must be non-preemptible)
-- specify scripts from githup or cloud storage
+- specify scripts from github or cloud storage
+- storage should not be in the cluster, rather using cloud storage (GCS) or bigtable or bigquery. such off-cluster storage enables us to shut down the cluster as soon as the job is complete, and reduces the cost. GCS itself is cheaper than persistent disk storage.
+
 ## scaling
 - add workers
 - high availability config - 3 master nodes
@@ -16,4 +18,7 @@
 ## Tutorial
 - create a new cluster
 `gcloud dataproc clusters create spark-test --subnet default --zone us-east4-b --single-node --master-machine-type n1-standard-1 --master-boot-disk-size 500 --image-version 1.4-ubuntu18 --project chromatic-being-242810`
+
+- https://googlecoursera.qwiklabs.com/focuses/31818
+
 
