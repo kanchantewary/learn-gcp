@@ -12,4 +12,8 @@
 - auto-restarting can be configured
 ## connectors
 - bigtable
-- 
+
+## Tutorial
+- create a new cluster
+`gcloud dataproc clusters create spark-test --subnet default --zone us-east4-b --single-node --master-machine-type n1-standard-1 --master-boot-disk-size 500 --image-version 1.4-ubuntu18 --project chromatic-being-242810`
+
