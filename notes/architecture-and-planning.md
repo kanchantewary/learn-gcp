@@ -65,6 +65,10 @@ list the free products
 
 ## cloud migration strategy (ref coursera-gcp)
 
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-overview
+https://cloud.google.com/blog/products/databases
+https://cloud.google.com/blog/products/dataproc
+
 ## Footnotes:
 - Code refactoring is the process of restructuring existing computer code – changing the factoring – without changing its external behavior. */Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which “too small to be worth doing”. However the cumulative effect of each of these transformations is quite significant/* ~Martin Fowler
 
