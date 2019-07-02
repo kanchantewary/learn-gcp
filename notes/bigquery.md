@@ -47,3 +47,7 @@ query plan explanation is available
   - bigquery data owner
   - bigquery data editor
   - bigquery user
+
+- how does bigquery work: fast sql engine (bigquery query service) +storage service (bigquery storage service)
+- project>dataset>tables
+- bigquery connectors to other gcp services e.g. dataproc, dataflow
