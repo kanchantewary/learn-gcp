@@ -51,3 +51,9 @@ query plan explanation is available
 - how does bigquery work: fast sql engine (bigquery query service) +storage service (bigquery storage service)
 - project>dataset>tables
 - bigquery connectors to other gcp services e.g. dataproc, dataflow
+
+# BQML
+https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro
+
+# use with google sheets
+https://cloud.google.com/blog/products/g-suite/connecting-bigquery-and-google-sheets-to-help-with-hefty-data-analysis
