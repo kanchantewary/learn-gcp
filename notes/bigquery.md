@@ -52,8 +52,19 @@ query plan explanation is available
 - project>dataset>tables
 - bigquery connectors to other gcp services e.g. dataproc, dataflow
 
-# BQML
-https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro
+# BigQuery ML
+- enables users to create and execute machine learning models in BigQuery using standard SQL queries
+- available from web UI, bq command line, rest API, external tools e.g. jupyter or BI platforms
+- supported model types
+  - linear regression for forecasting
+  - Binary logistic regression for classification
+  - Multiclass logistic regression for classification
+  - K-means clustering for data segmentation
+ - BigQuery ML models are stored in BigQuery datasets like tables and views. When you create and use models in BigQuery ML, your charges are based on how much data is used to train a model and on the queries you run against the data.
+ - common commands
+  - (CREATE MODEL)[https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-create]
+  - EVALUATE
+  - PREDICT
 
 # use with google sheets
 https://cloud.google.com/blog/products/g-suite/connecting-bigquery-and-google-sheets-to-help-with-hefty-data-analysis
