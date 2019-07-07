@@ -1,4 +1,10 @@
 # Big Query
+
+# Resources
+https://www.oreilly.com/library/view/google-bigquery-the/9781492044451/
+https://www.oreilly.com/library/view/google-bigquery-analytics/9781118824795/
+
+## quick notes
 rdbms - schema on write
 hive - schema on read
 semantic equivalent of Hive
