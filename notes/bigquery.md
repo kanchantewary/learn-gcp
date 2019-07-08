@@ -1,8 +1,9 @@
 # Big Query
 
 # Resources
-https://www.oreilly.com/library/view/google-bigquery-the/9781492044451/
-https://www.oreilly.com/library/view/google-bigquery-analytics/9781118824795/
+- https://www.oreilly.com/library/view/google-bigquery-the/9781492044451/
+- https://www.oreilly.com/library/view/google-bigquery-analytics/9781118824795/
+- [SQL reference] (https://cloud.google.com/bigquery/docs/reference/standard-sql/)
 
 ## quick notes
 rdbms - schema on write
