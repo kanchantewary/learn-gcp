@@ -37,6 +37,18 @@ partitioned tables
 query plan explanation is available
 - slots
 - standard SQL is supported
+  - INT64 (8 BYTES)
+  - NUMERIC (16 BYTES) - Decimal values with 38 decimal digits of precision and 9 decimal digits of scale.
+  - FLOAT64 (8 BYTES)
+  - BOOL, STRING (Variable-length character (Unicode) data, UTF-8)
+  - BYTES (variable length binary data)
+  - DATE
+  - DATETIME
+  - TIME
+  - TIMESTAMP - timezone can be specified, contrary to datetime. When a time zone is not explicitly specified, the default time zone, UTC. format is continent/[region/]city e.g. America/Argentina/Buenos_Aires
+  - ARRAY
+  - STRUCT
+  - GEOGRAPHY
 - [arrays](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays)
   - ordered list consisting of zero or more values of the same data type
   - You can construct arrays of simple data types, such as INT64, and complex data types, such as STRUCTs.
