@@ -35,6 +35,54 @@ partitioned tables
 - partition decorator
 query plan explanation is available
 - slots
+- standard SQL is supported
+- [arrays](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays)
+  - ordered list consisting of zero or more values of the same data type
+  - You can construct arrays of simple data types, such as INT64, and complex data types, such as STRUCTs.
+  - array of arrays is not supported
+  - use following to construct arrays:
+  ```
+  SELECT [1, 2, 3] as numbers;
+  SELECT ["apple", "pear", "orange"] as fruit;
+  SELECT [true, false, true] as booleans;
+  SELECT ARRAY<FLOAT64>[1, 2, 3] as floats;
+  SELECT GENERATE_ARRAY(11, 33, 2) AS odds;
+  SELECT GENERATE_ARRAY(21, 14, -1) AS countdown;
+  SELECT GENERATE_DATE_ARRAY('2017-11-21', '2017-12-31', INTERVAL 1 WEEK) AS date_array;
+  # create array from subquery
+  WITH sequences AS
+  (SELECT [0, 1, 1, 2, 3, 5] AS some_numbers
+  UNION ALL SELECT [2, 4, 8, 16, 32] AS some_numbers
+  UNION ALL SELECT [5, 10] AS some_numbers)
+  SELECT some_numbers,
+  ARRAY(SELECT x * 2
+        FROM UNNEST(some_numbers) AS x) AS doubled
+  FROM sequences;
+  # create array from a set of rows using ARRAY_AGG:
+  WITH fruits AS
+  (SELECT "apple" AS fruit
+   UNION ALL SELECT "pear" AS fruit
+   UNION ALL SELECT "banana" AS fruit)
+  SELECT ARRAY_AGG(fruit ORDER BY fruit) AS fruit_basket
+  FROM fruits;
+  # using array_concat 
+  WITH aggregate_example AS
+  (SELECT [1,2] AS numbers
+   UNION ALL SELECT [3,4] AS numbers
+   UNION ALL SELECT [5, 6] AS numbers)
+  SELECT ARRAY_CONCAT_AGG(numbers) AS count_to_six_agg
+  FROM aggregate_example;
+  # concatenate string type array:
+  WITH greetings AS
+  (SELECT ["Hello", "World"] AS greeting)
+  SELECT ARRAY_TO_STRING(greeting, " ") AS greetings
+  FROM greetings;
+  ```
+  - access array elements
+    - OFFSET - zero based indexes
+    - ORDINAL - one based indexes
+    - ARRAY_LENGTH()
+    - Flattening arrays - use UNNEST
 
 # coursera/qwiklabs
 - use console to query a public dataset (usa names)
