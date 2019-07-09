@@ -12,15 +12,15 @@ bq ls --format=pretty
 bq ls -a
 bq ls --format=prettyjson --project_id chromatic-being-242810
 ```
--show metadata
+- show metadata
 ```
 bq show --format=prettyjson BQML_BIRTHWEIGHT
 ```
---add label
+- add label
 ```
 bq update --set_label department:shipping --set_label cost_center:logistics mydataset
 ```
--create a table
+- create a table
 ```
 bq mk -t --expiration 3600 --description "This is my table" --label organization:development mydataset.mytable qtr:STRING,sales:FLOAT,year:STRING
 #create a table using schema stored in a local json file
