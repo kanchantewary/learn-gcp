@@ -155,4 +155,13 @@ https://cloud.google.com/blog/products/g-suite/connecting-bigquery-and-google-sh
   - If possible, materialize your query results in stages. If you create a large, multi-stage query, each time you run it, BigQuery reads all the data that is required by the query. You are billed for all the data that is read each time the query is run. Instead, break your query into stages where each stage materializes the query results by writing them to a destination table. Querying the smaller destination table reduces the amount of data that is read and lowers costs. The cost of storing the materialized results is much less than the cost of processing large amounts of data.
   - Keeping large result sets in BigQuery storage has a cost. If you don't need permanent access to the results, use the default table expiration to automatically delete the data for you.
   - There is no charge for loading data into BigQuery. There is a charge, however, for streaming data into BigQuery. Unless your data must be immediately available, load your data rather than streaming it.
-  
+- optimize performance
+  - To optimize the performance of BigQuery queries, it helps to understand the key drivers of query speed. The time taken for a query to complete depends on how much data is read from storage, how that data is organized, how many stages your query requires, how parallelizable those stages are, how much data is processed at each stage, and how computationally expensive each of the stages is.
+  - 
+# Data Transfer
+- https://cloud.google.com/bigquery/docs/transfer-service-overview
+
+# Google Cloud Client library
+The Google Cloud Client Library for BigQuery is the recommended option for accessing BigQuery programmatically.
+pip install google-cloud-bigquery
+- https://github.com/GoogleCloudPlatform/bigquery-oreilly-book/blob/master/05_devel/bigquery_cloud_client.ipynb
