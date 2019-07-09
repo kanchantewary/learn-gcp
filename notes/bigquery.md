@@ -24,6 +24,16 @@ data formats supported
 csv, json, avro, cloud datastore backups
 partitioning
 
+## datasets
+- Colocate your BigQuery dataset and your external data source
+- Moving BigQuery data between locations
+
+## tables
+tables with native storage, tables with external storage, views
+partitioned tables
+- partitions are automatically (dynamic) created by bigquery, based pn pseudo column
+- partition decorator
+
 ## querying
 interactive queries
 - daily usage
@@ -31,9 +41,6 @@ interactive queries
 views - logical, not materialized
 authorized views - 1000 per dataset limit
 row-level permissions
-partitioned tables
-- partitions are automatically (dynamic) created by bigquery, based pn pseudo column
-- partition decorator
 query plan explanation is available
 - slots
 - standard SQL is supported
@@ -135,3 +142,17 @@ query plan explanation is available
 
 # use with google sheets
 https://cloud.google.com/blog/products/g-suite/connecting-bigquery-and-google-sheets-to-help-with-hefty-data-analysis
+
+
+## Best Practices
+- Controlling Costs- Queries are billed according to the number of bytes read. 
+  - Query only the columns that you need, avoid select \*. Or, SELECT * EXCEPT to exclude one or more columns from the results.
+  - Applying a LIMIT clause to a SELECT * query does not affect the amount of data read. You are billed for reading all bytes in the entire table, and the query counts against your free tier quota.
+  - If you are experimenting with or exploring your data, you can use table preview options to view data for free and without affecting quotas. In the CLI, use the bq head command and specify the number of rows to preview.
+  - Price your queries before running them, using The query validator in the GCP Console or the classic web UI or --dry_run flag in the CLI
+  - You can limit the number of bytes billed for a query using the maximum bytes billed setting. When you set maximum bytes billed, if the query will read bytes beyond the limit, the query fails without incurring a charge. In the CLI, use bq query command with the --maximum_bytes_billed flag.
+  - If possible, partition your BigQuery tables by date. Partitioning your tables allows you to query relevant subsets of data which improves performance and reduces costs.
+  - If possible, materialize your query results in stages. If you create a large, multi-stage query, each time you run it, BigQuery reads all the data that is required by the query. You are billed for all the data that is read each time the query is run. Instead, break your query into stages where each stage materializes the query results by writing them to a destination table. Querying the smaller destination table reduces the amount of data that is read and lowers costs. The cost of storing the materialized results is much less than the cost of processing large amounts of data.
+  - Keeping large result sets in BigQuery storage has a cost. If you don't need permanent access to the results, use the default table expiration to automatically delete the data for you.
+  - There is no charge for loading data into BigQuery. There is a charge, however, for streaming data into BigQuery. Unless your data must be immediately available, load your data rather than streaming it.
+  
