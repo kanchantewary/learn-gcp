@@ -20,3 +20,23 @@ bq show --format=prettyjson BQML_BIRTHWEIGHT
 ```
 bq update --set_label department:shipping --set_label cost_center:logistics mydataset
 ```
+-create a table
+```
+bq mk -t --expiration 3600 --description "This is my table" --label organization:development mydataset.mytable qtr:STRING,sales:FLOAT,year:STRING
+#create a table using schema stored in a local json file
+bq mk --table --expiration 3600 --description "This is my table" --label organization:development myotherproject:mydataset.mytable /tmp/myschema.json
+#create table from a query result
+bq query \
+--destination_table mydataset.mytable \
+--use_legacy_sql=false \
+'SELECT
+  name,
+  number
+FROM
+  `bigquery-public-data`.usa_names.usa_1910_current
+WHERE
+  gender = "M"
+ORDER BY
+  number DESC'
+  ```
+  
