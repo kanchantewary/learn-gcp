@@ -2,7 +2,7 @@
 - Reference
 https://codelabs.developers.google.com/
 
--log in
+- log in
 ```
 gcloud auth list
 gcloud config set project <PROJECT_ID>
