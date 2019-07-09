@@ -15,7 +15,7 @@ bq ls --format=prettyjson --project_id chromatic-being-242810
 -show metadata
 ```
 bq show --format=prettyjson BQML_BIRTHWEIGHT
-
+```
 --add label
 ```
 bq update --set_label department:shipping --set_label cost_center:logistics mydataset
