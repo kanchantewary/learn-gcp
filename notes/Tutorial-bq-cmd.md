@@ -1,4 +1,12 @@
 # BigQuery Command Line tutorial
+- Reference
+https://codelabs.developers.google.com/
+
+-log in
+```
+gcloud auth list
+gcloud config set project <PROJECT_ID>
+```
 - creating a dataset
 ```
 bq --location=US mk -d \
@@ -39,4 +47,31 @@ WHERE
 ORDER BY
   number DESC'
   ```
+  - loading a csv file
+  ```
+  bq load \
+    --source_format=CSV \
+    --skip_leading_rows=1 \
+    bq_load_codelab.customer_transactions \
+    ./customer_transactions.csv \
+    id:string,zip:string,ttime:timestamp,amount:numeric,fdbk:float,sku:string
+  ```
+  - view table properties
+  ```
+  bq show bq_load_codelab.customer_transactions
+  ```
+  - query a table
+  ```
+  bq query --nouse_legacy_sql '
+SELECT SUM(c.amount) AS amount_total, z.state_code AS state_code
+FROM `bq_load_codelab.customer_transactions` c
+JOIN `bigquery-public-data.utility_us.zipcode_area` z
+ON c.zip = z.zipcode
+GROUP BY state_code
+'
+```
+- delete a dataset
+```
+bq rm -r bq_load_codelab
+```
   
