@@ -8,6 +8,11 @@
 - push subscribers - any app that can make a https request to googleapis.com
 - pull subscribers - webhook endpoint that can process a https POST requests
 
+# Features
+- at least once delivery
+- exactly once processing
+- no provisioning
+
 ## use cases
 - balance workload in a network cluster
 - anyncronous order processing
