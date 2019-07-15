@@ -2,12 +2,18 @@
 Google Cloud Platform - data engineer ceritification
 
 ## Resources
-https://cloud.google.com/certification/guides/data-engineer/
-https://cloud.google.com/training/data-ml  
-https://www.qwiklabs.com/  
-https://learning.oreilly.com/videos/gcp-complete-google/9781788999519  
-https://cloud.google.com/docs/overview/cloud-platform-services#top_of_page  
-https://github.com/GoogleCloudPlatform/training-data-analyst  
+- https://cloud.google.com/certification/guides/data-engineer/
+- https://cloud.google.com/training/data-ml  
+- https://www.qwiklabs.com/  
+- https://learning.oreilly.com/videos/gcp-complete-google/9781788999519  
+- https://cloud.google.com/docs/overview/cloud-platform-services#top_of_page  
+- https://github.com/GoogleCloudPlatform/training-data-analyst  
+- https://www.coursera.org/learn/preparing-cloud-professional-data-engineer-exam
+- https://www.coursera.org/learn/preparing-cloud-professional-cloud-architect-exam
+- https://www.coursera.org/learn/gcp-fundamentals
+- https://www.coursera.org/specializations/gcp-architecture
+- 
+
 
 ## Bookmarks from coursera-gcp-ml
 
