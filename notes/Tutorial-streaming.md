@@ -13,31 +13,6 @@ timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string
 passenger_count:integer -t taxirides.realtime
 ```
 - Create a Cloud Storage Bucket
-- Set up a Cloud Dataflow Pipeline
-  - pip install --upgrade virtualenv
-  - virtualenv env
-  - source env/bin/activate
-  - pip install --quiet apache-beam[gcp]
-  - gsutil mb \
-    gs://qwiklabs-gcp-08b73228864a743b
-  - python -m \
-    apache_beam.examples.wordcount \
-    --project \
-    qwiklabs-gcp-08b73228864a743b \
-    --runner DataflowRunner \
-    --temp_location \
-    gs://qwiklabs-gcp-08b73228864a743b/temp \
-    --output \
-    gs://qwiklabs-gcp-08b73228864a743b/results/output \
-    --job_name dataflow-intro
-    
-- project is the GCP project.
-- runner is the specific execution engine to use to run your pipeline. The DataflowRunner uses the Dataflow Service as the execution engine.
-- temp_location is the storage bucket Cloud Dataflow will use for the binaries and other data for running your pipeline. This location can be shared across multiple jobs.
-- output is the bucket used by the WordCount example to store the job results.
-- job_name is a user-given unique identifier. Only one job may execute with the same name.
-
-
 - CREATE JOB FROM TEMPLATE.
 Enter streaming-taxi-pipeline as the Job name for your Cloud Dataflow job.
 Under Cloud Dataflow template, select the Cloud Pub/Sub Topic to BigQuery template.
@@ -97,6 +72,31 @@ Hierarchy: dashboard_sort
 Metric: SUM() total_rides, SUM() total_passengers, SUM() total_revenue
 Sort: dashboard_sort Ascending (latest rides first)
 ```
+
+# Another tutorial on dataflow
+- Set up a Cloud Dataflow Pipeline
+  - pip install --upgrade virtualenv
+  - virtualenv env
+  - source env/bin/activate
+  - pip install --quiet apache-beam[gcp]
+  - gsutil mb \
+    gs://qwiklabs-gcp-08b73228864a743b
+  - python -m \
+    apache_beam.examples.wordcount \
+    --project \
+    qwiklabs-gcp-08b73228864a743b \
+    --runner DataflowRunner \
+    --temp_location \
+    gs://qwiklabs-gcp-08b73228864a743b/temp \
+    --output \
+    gs://qwiklabs-gcp-08b73228864a743b/results/output \
+    --job_name dataflow-intro
+    
+- project is the GCP project.
+- runner is the specific execution engine to use to run your pipeline. The DataflowRunner uses the Dataflow Service as the execution engine.
+- temp_location is the storage bucket Cloud Dataflow will use for the binaries and other data for running your pipeline. This location can be shared across multiple jobs.
+- output is the bucket used by the WordCount example to store the job results.
+- job_name is a user-given unique identifier. Only one job may execute with the same name.
 
 
 
