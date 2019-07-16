@@ -81,7 +81,7 @@ Stochastic Gradient Descent(SGD) & Mini-Batch Gradient Descent
   - cloud video intelligence api
   - [cloud Auto-ML](https://cloud.google.com/automl/)
     - autoML vision(https://cloud.google.com/vision/automl/docs/)
-    - precision, recall, confusion metrics
+    - precision, recall, [confusion metrics](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/)
   - custom model
     - use BQML
     - [use tensorflow,keras on GCP](https://www.tensorflow.org/tutorials/)
