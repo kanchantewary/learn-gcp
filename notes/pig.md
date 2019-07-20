@@ -77,6 +77,7 @@ pig -param_file myparams.txt myscript.pg --pass a list of parameters from a file
 pig -param dir='/labfiles' myscript.pig --pass a single parameter in command line
 a=load '$dir/file1.txt' as PigStorage('\t') --how a parameter $dir being used inside a script
 
+```
 - Functions
   - AVG - computes average of number values in a single column bag
   - CONCAT - concatenates two columns
