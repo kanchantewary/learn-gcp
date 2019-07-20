@@ -77,4 +77,26 @@ pig -param_file myparams.txt myscript.pg --pass a list of parameters from a file
 pig -param dir='/labfiles' myscript.pig --pass a single parameter in command line
 a=load '$dir/file1.txt' as PigStorage('\t') --how a parameter $dir being used inside a script
 
-
+- Functions
+  - AVG - computes average of number values in a single column bag
+  - CONCAT - concatenates two columns
+  - COUNT - counts the number of elements in a bag, requires a preceding group by clause
+  - COUNT_STAR - counts the number of elements in a bag
+  - DIFF - compares two fields in a tuple
+  - IsEmpty - checks if a tuple or bag is empty
+  - MAX
+  - MIN
+  - SIZE
+  - SUM
+  - TOKENIZE
+  - TOTUPLE
+  - TOBAG
+  - TOMAP
+  - Math functions e.g. ABS, CEIL
+  - string functions e.g. STRSPLIT, SUBSTRING, REPLACE, REGEX_EXTRACT, REGEX_EXTRACT_ALL
+  - MAPREDUCE
+  - STREAM
+  - UDF - DEFINE and REGISTER
+  - fs
+  - EXPLAIN
+  
