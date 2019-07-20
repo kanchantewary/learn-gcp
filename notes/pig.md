@@ -41,10 +41,6 @@
   load 'MyDir/file1.txt' using PigStorage(',') as (f1:integer,f2:chararray, f3:float)
   load 'MyDir/' using PigStorage(',') as (f1:integer,f2:chararray, f3:float)  --all files are read
   ```
-  - FOREACH
-  - FILTER
-  - JOIN
-  - ORDER BY
   - STORE - save results to a file
     - PigStorage()
     - BinStorage()
@@ -53,10 +49,26 @@
   ```
   STORE alias INTO <directory> [using function]; --function would be one of the above, if nothing is mentioned, PigStorage would be used as default
   ```
+  - DUMP - writes results to the console
+  - FOREACH - projects fields into a new relation
+  - FILTER - select tuples from a relation based on a filter criteria
+  - JOIN
+  - ORDER BY
   - DISTINCT
   - GROUP
-  - COGROUP
-  - DUMP - writes results to the console
+  - COGROUP - used to group multiple relations at the same time
+```
+data = load ..
+b= filter data by pubyear==2003;
+c= order data by author ASC;
+alias = GROUP alias by <all||expression> [PARTITION BY partitioner][PARALLEL n]
+# emp=id,dept,income
+# dept=did,name
+x= cogroup emp by dept, dept by did;
+alias= FOREACH {block|nested block}
+x = load
+out = foreach x generate x1,x2,x1+x2 as f1:int;
+```
 - storage type
 - case sensitivity - keywords and operators are not case-sensitive, but function names, names of fields and relations are.
 - parameter substitution
