@@ -1,6 +1,6 @@
 # Apache Pig
 - high level data flow tool, abstraction over hadoop map-reduce
-- two main components - pig latin and pig execution
+- two main components - pig latin (SQL-like scripting language) and pig execution
 - built-in support for join, filter, sort
 - supports nested data types like tuples, bags(collection of a set of tuples), maps(set of key-value pairs). Atoms are the basic data types like string, int, float, long
 - udf support
