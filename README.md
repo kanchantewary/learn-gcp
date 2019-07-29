@@ -27,3 +27,9 @@ Learn more about big data infrastructure:
 Compute Engine: https://cloud.google.com/compute/
 Storage: https://cloud.google.com/storage/
 Pricing: https://cloud.google.com/pricing/
+
+## Bookmarks from Leveraging Unstructured Data - Lab 5 : Cluster automation using CLI commands v1.3
+- https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scheduled-deletion
+- https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/network
+- https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone
+- travis vs jenkins https://stackoverflow.com/questions/32422264/jenkins-vs-travis-ci-which-one-would-you-use-for-a-open-source-project
