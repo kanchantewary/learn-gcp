@@ -23,6 +23,11 @@ data ingestion can be done through batch or streaming
 data formats supported
 csv, json, avro, cloud datastore backups
 partitioning
+- pay for usage only, storage cost is similar to cloud storage. other benefits are durability, immutable audit logs, 
+- can be shared across organisation silos, hence collaboration becomes much easier
+- bigquery storage is columnar, each column is stored in a separate, compressed, encrypted file that is replicated 3+ times. 
+- TABLE_DATE_RANGE, useful when multiple tables having similar pattern is used inside a query
+- bigquery.samples
 
 ## datasets
 - Colocate your BigQuery dataset and your external data source
