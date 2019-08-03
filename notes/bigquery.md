@@ -31,6 +31,17 @@ partitioning
 - TABLE_DATE_RANGE, useful when multiple tables having similar pattern is used inside a query
 - bigquery.samples
 
+Bigquery architecture
+Capacitor files – distributed storage, durable, encrypted at rest	
+Storage sets – grouped set of capacitor files
+All or nothing – while loading data
+Snapshot isolation
+Encryption – PII, tink library
+New features
+Persistent UDF
+scripting
+
+
 ## datasets
 - Colocate your BigQuery dataset and your external data source
 - Moving BigQuery data between locations
