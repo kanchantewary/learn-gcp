@@ -5,6 +5,7 @@
 - https://www.oreilly.com/library/view/google-bigquery-analytics/9781118824795/
 - [SQL reference] (https://cloud.google.com/bigquery/docs/reference/standard-sql/)
 - https://medium.com/@hoffa/the-top-weekend-languages-according-to-githubs-code-6022ea2e33e8#.8oj2rp804
+- https://youtu.be/KL_i5XZIaJg
 
 ## quick notes
 rdbms - schema on write
@@ -109,15 +110,20 @@ query plan explanation is available
     - ORDINAL - one based indexes
     - ARRAY_LENGTH()
     - Flattening arrays - use UNNEST
+- Notes from documentation
+```
+# If you begin a function with the SAFE. prefix, it will return NULL instead of an error.
+SAFE.function_name()
+SELECT SAFE.SUBSTR('foo', 0, -2) AS safe_output UNION ALL
+SELECT SAFE.SUBSTR('bar', 0, 2) AS safe_output;
 
-'''
 # create a table
 bq load --source_format=NEWLINE_DELIMITED_JSON $DEVSHELL_PROJECT_ID:cpb101_flight_data.flights_2014 gs://cloud-training/CPB200/BQ/lab4/domestic_2014_flights_*.json ./schema_flight_performance.json
 # list tables
 bq ls $DEVSHELL_PROJECT_ID:cpb101_flight_data
 # export from a table to gcp bucket
 bq extract cpb101_flight_data.AIRPORTS gs://$BUCKET/bq/airports2.csv
-'''
+```
 
 # coursera/qwiklabs
 - use console to query a public dataset (usa names)
