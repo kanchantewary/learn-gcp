@@ -1,12 +1,41 @@
 # Big Query
+## Usage
+- highly scalable enterprise data warehouse
 
+## Architecture
+- BI engine
+- build a data lake
+
+## bq command line tool
+- bq load - load data into a table, supported formats are avro, json, csv, orc, parquet, cloud datastore exports
+- bq head - displays rows in a table
+- bq query -  creates a query job that runs the supplied SQL query
+- bq mk - creates a dataset, table, view, or transfer configuration.
+- bq mkdef - 
+- bq extract - used to export table data to Google Cloud Storage
+- bq insert - insert rows of newline-delimited JSON formatted data using the streaming buffer
+- bq update - updates a dataset, table, view, model, or transfer configuration.
+- bq ls - lists objects in a collection. Objects can be jobs, datasets, tables, views. collection can be a dataset or a project.
+- bq ls -j myproject
+- bq partition - used to convert date-named tables (ending in [YYYYmmdd]) into partitioned tables.
+- bq rm - deletes a dataset, table, view, model, or transfer configuration.
+- bq show - displays information about an object.
+- bq wait - waits some number of seconds for a job to finish.
+- bq cancel - used to cancel jobs
+- bq cp - used to copy tables
+## Data types
+## Bigquery data transfer service
+## Geo-spatial analysis
+## analytic functions
+## user defined functions
+## machine learning
 # Resources
 - https://www.oreilly.com/library/view/google-bigquery-the/9781492044451/
 - https://www.oreilly.com/library/view/google-bigquery-analytics/9781118824795/
 - [SQL reference] (https://cloud.google.com/bigquery/docs/reference/standard-sql/)
 - https://medium.com/@hoffa/the-top-weekend-languages-according-to-githubs-code-6022ea2e33e8#.8oj2rp804
 - https://youtu.be/KL_i5XZIaJg
-
+- https://code.google.com/archive/p/google-bigquery-tools/wikis/GettingStartedwithBigQueryViaTheCommandLine.wiki
 ## quick notes
 rdbms - schema on write
 hive - schema on read
