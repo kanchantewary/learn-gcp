@@ -36,6 +36,7 @@
 - https://medium.com/@hoffa/the-top-weekend-languages-according-to-githubs-code-6022ea2e33e8#.8oj2rp804
 - https://youtu.be/KL_i5XZIaJg
 - https://code.google.com/archive/p/google-bigquery-tools/wikis/GettingStartedwithBigQueryViaTheCommandLine.wiki
+- https://cloud.google.com/blog/products/gcp/inside-capacitor-bigquerys-next-generation-columnar-storage-format
 ## quick notes
 rdbms - schema on write
 hive - schema on read
