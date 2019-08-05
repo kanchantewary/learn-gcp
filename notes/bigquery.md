@@ -3,6 +3,11 @@
 - highly scalable enterprise data warehouse
 
 ## Architecture
+- Dremel
+- Colossus - Distributed Storage
+- Borg - Compute
+- Jupiter networking infrastructure
+- Capacitor — the storage format in BigQuery
 - BI engine
 - build a data lake
 
@@ -37,6 +42,8 @@
 - https://youtu.be/KL_i5XZIaJg
 - https://code.google.com/archive/p/google-bigquery-tools/wikis/GettingStartedwithBigQueryViaTheCommandLine.wiki
 - https://cloud.google.com/blog/products/gcp/inside-capacitor-bigquerys-next-generation-columnar-storage-format
+- https://cloud.google.com/solutions/build-a-data-lake-on-gcp
+- https://cloud.google.com/blog/products/gcp/bigquery-under-the-hood
 ## quick notes
 rdbms - schema on write
 hive - schema on read
