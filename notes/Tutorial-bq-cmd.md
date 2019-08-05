@@ -75,3 +75,8 @@ GROUP BY state_code
 bq rm -r bq_load_codelab
 ```
   
+
+   12  bq head --max_rows=10 chromatic-being-242810.BQML_BIRTHWEIGHT
+   13  bq head --max_rows=10 chromatic-being-242810.BQML_BIRTHWEIGHT.CUSTOMER
+   14  bq head --max_rows=10 BQML_BIRTHWEIGHT.CUSTOMER
+   15  bq query --destination_table BQML_BIRTHWEIGHT.CUSTOMER --use_legacy_sql=false 'select * from BQML_BIRTHWEIGHT.CUSTOMER'
