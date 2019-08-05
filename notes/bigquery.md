@@ -3,6 +3,7 @@
 - highly scalable enterprise data warehouse
 
 ## Architecture
+- https://panoply.io/data-warehouse-guide/bigquery-architecture/
 - Dremel
 - Colossus - Distributed Storage
 - Borg - Compute
@@ -34,6 +35,12 @@
 ## analytic functions
 ## user defined functions
 ## machine learning
+# Comparison with other products
+- major other products are AWS redshift, snowflake (has strategic partnership with gcp), Azure SQL datawarehouse, AWS Athena
+- https://www.analyticsindiamag.com/redshift-vs-bigquery-what-are-the-factors-to-consider-before-choosing-a-data-warehouse/
+- https://blog.panoply.io/a-full-comparison-of-redshift-and-bigquery
+- https://www.mindtree.com/blog/performance-comparison-aws-athena-and-google-bigquery
+- https://fivetran.com/blog/warehouse-benchmark
 # Resources
 - https://www.oreilly.com/library/view/google-bigquery-the/9781492044451/
 - https://www.oreilly.com/library/view/google-bigquery-analytics/9781118824795/
