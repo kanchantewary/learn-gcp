@@ -15,6 +15,15 @@
 - images
 - docker registry e.g. dockerhub. An admin can create private registry as well
 - docker swarm
+- Docker networking
+  - linux bridges
+  - exposing container ports
+  - port forwarding
+- Docker storage
+  - different file system layers
+  - storage by default in a container is ephemeral, i.e. removed when container is stopped.
+  - host directory storage - persistent storage
+  
 ## Common docker tasks
 - docker version - shows client and server versions. Also, note API version of client and server should match. 
 - docker info
@@ -24,6 +33,10 @@
 - docker images
 - docker push
 - docker run
+  - detached or foreground running
+  - Container identification
+  - network settings
+  - runtime constraints on CPU and memory
 - docker start <container name>
 - docker stats <container name>
 - docker ps
@@ -36,3 +49,25 @@
 - docker commit
 - docker rm
   
+
+```
+## List Docker CLI commands
+docker
+docker container --help
+
+## Display Docker version and info
+docker --version
+docker version
+docker info
+
+## Execute Docker image
+docker run hello-world
+
+## List Docker images
+docker image ls
+
+## List Docker containers (running, all, all in quiet mode)
+docker container ls
+docker container ls --all
+docker container ls -aq
+```
