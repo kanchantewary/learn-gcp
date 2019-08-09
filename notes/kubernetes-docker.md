@@ -31,15 +31,23 @@
 - docker search <word>
 - docker pull <name of the image>
 - docker rmi <name of the image>
-- docker images - list locally stored images
+- Remove all unused images (which are not referenced by any existing container)
+  ```
+  docker image prune -a
+  ```
+- docker images - list locally stored images (also works with 'docker image ls')
+- docker build
 - docker push
 - docker run
   - detached or foreground running. If '-d' option is specified, the container runs detached from console, i.e. in background.
   - Container identification
   - network settings
   - runtime constraints on CPU and memory
+  ```
+  docker run <image>:<tag>
+  ```
 - docker start <container name>
-- docker stats <container name>
+- docker container ls - list all containers
 - docker ps - list running containers
 - docker kill
 - docker stop
@@ -55,8 +63,6 @@
   ```
 - docker tag
   
-  
-
 ```
 ## List Docker CLI commands
 docker
@@ -73,8 +79,6 @@ docker run hello-world
 ## List Docker images
 docker image ls
 
-## List Docker containers (running, all, all in quiet mode)
-docker container ls
-docker container ls --all
-docker container ls -aq
 ```
+
+## Minikube 
