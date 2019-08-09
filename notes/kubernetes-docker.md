@@ -81,4 +81,8 @@ docker image ls
 
 ```
 
-## Minikube 
+## Kubernetes in depth
+- pods - co-located group of containers and represents the basic building block in Kubernetes. Containers are designed to run only a single process per container. you need to run each process in its own container.A pod of containers allows you to run closely related processes together and provide them with (almost) the same environment as if they were all running in a single container, while keeping them somewhat isolated. Because all containers of a pod run under the same Network and UTS namespaces (we’re talking about Linux namespaces here), they all share the same hostname and network interfaces. Similarly, all containers of a pod run under the same IPC namespace and can communicate through IPC. how containers should be grouped into pods:
+  - Do they need to be run together or can they run on different hosts?
+  - Do they represent a single whole or are they independent components?
+  - Must they be scaled together or individually?
