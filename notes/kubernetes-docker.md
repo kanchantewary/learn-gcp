@@ -86,3 +86,12 @@ docker image ls
   - Do they need to be run together or can they run on different hosts?
   - Do they represent a single whole or are they independent components?
   - Must they be scaled together or individually?
+- labels
+- label selector
+- annotations
+- kubernetes namespaces
+- liveness probes
+- Replication controllers
+- ReplicaSets
+- DaemonSet
+- scheduling
