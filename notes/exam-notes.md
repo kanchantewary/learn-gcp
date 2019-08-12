@@ -4,3 +4,13 @@
     - research and reharse
       - proficiency
         - exam
+- bookmark questions that you do not know, review later
+- for each technology, focus on following:
+  - when to use it
+  - how to control access
+  - how to manage performance
+  - data distribution strategies (+scaling, backup)
+  - key features
+ - Focus on solutions instead of technologies
+ - Focus on operations and infrastructure instead of analysis and advanced ML
+ - Focus on the "-ities": Security, Scalability, Reliability, Flexibility, Portability, etc.
