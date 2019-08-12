@@ -95,3 +95,10 @@ docker image ls
 - ReplicaSets
 - DaemonSet
 - scheduling
+minikube - single vm demo environment
+## kubectl common commands
+which kubectl
+kubectl version
+cd .kube
+cat config
+minikube 
