@@ -1,0 +1,6 @@
+- https://www.coursera.org/learn/preparing-cloud-professional-data-engineer-exam
+- key points
+  - identify and fill gaps
+    - research and reharse
+      - proficiency
+        - exam
