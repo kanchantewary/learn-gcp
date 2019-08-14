@@ -8,7 +8,8 @@ compute engine(GCE)>container engine(GKE)>app engine(GAE)>google cloud functions
 
 ## Compute Engine
 
-https://youtu.be/ZJNY7VAKYzw
+- https://youtu.be/ZJNY7VAKYzw
+- https://youtu.be/XcHE5V82OxM
 
 - predefined machine types
   - shared core - micro, small
