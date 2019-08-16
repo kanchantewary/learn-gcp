@@ -42,3 +42,15 @@ compute engine(GCE)>container engine(GKE)>app engine(GAE)>google cloud functions
  - resource level IAM policy
  - OS login (generally available)
  - org policies for VMs
+
+- Instance life cycle
+  - PROVISIONING, STAGING, RUNNING, STOPPING, REPAIRING, TERMINATED
+  - reset an instance to wipe out the content and reset it to it's initial state
+- instance group - a collection of VM instances that you can manage as a single entity. unmanaged instance groups do not provide auto-scaling, or auto-healing or rolling updates, instance template can not be used, load balancing can be used however.
+  - MIG or managed instance groups offer following advantages. They can be zonal or regional.
+    - high availability
+    - auto-scaling - define autoscaling policy and a target utilization level (in percentage) that the autoscaler uses to determine when to scale the group. The policies can be any or multiple of the following: Average CPU utilization, HTTP load balancing serving capacity or Stackdriver Monitoring metrics. The autoscaler continuously collects usage information based on the policy, compares actual utilization to your desired target utilization, and determines if the group needs to be scaled up or down.
+    - auto-healing - use health-check signals to verify that an instance is created and its application is responding. Define how health is determined: how often to check, how long to wait for a response, and how many successful or failed attempts are decisive
+    - multi-zone coverage
+    - load balancing
+    - rolling updates
