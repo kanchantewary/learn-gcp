@@ -21,4 +21,13 @@ predictions = classifier.predict(input_fn=predict_input_fn)
 
 https://www.tensorflow.org/tutorials/
 
+# GCP coursera DE - course 4 - notes
+
+label - correct output for an input
+input - known values which can be provided to find the prediction
+example - label+input
+model - math function which takes an example and provides an approximated output
+clustering
+supervised learning - regression and classification
+ML pipeline
 
