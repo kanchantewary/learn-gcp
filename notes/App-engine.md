@@ -1,0 +1,13 @@
+# App Engine
+- PaaS
+- fully managed serverless platform
+- deployed in a particular region, so a regional service. Once a region is set, it can NOT be moved.
+- languages supported - Java, PHP, Node.js, Python, C#, .Net, Ruby and Go
+- Application Versioning
+- Traffic Splitting - Route incoming requests to different app versions, A/B test and do incremental feature rollouts
+- Open & Flexible - Custom runtimes allow you to bring any library and framework to App Engine by supplying a Docker container
+- Monitoring, Logging & Diagnostics - stackdriver
+- environment is standard or flexible
+- scaling type - manual, basic, automatic
+- instance class 
+- Traffic Migration or Traffic splitting
