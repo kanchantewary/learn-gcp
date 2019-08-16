@@ -30,4 +30,4 @@ model - math function which takes an example and provides an approximated output
 clustering
 supervised learning - regression and classification
 ML pipeline
-
+the need to predict a value should be repeating need, and not a one-off requirement, to be able to successfully leverage ML
