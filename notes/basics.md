@@ -55,6 +55,26 @@ c. network services
 d. big data services
 e. Machine learning services
 
+## Projects and hierarchy
+- organization - requires G-suite integration. If configured, all projects would be under an organization.
+- projects - essentially a way to organize the resources. projects are not tied to a particular region or zone, instead the underlying resources do. Project IDs are unique across all projects. That means if any user ever had a project with that ID, you cannot use it. The name of the project can be updated later.
+  - [gcloud commands](https://cloud.google.com/sdk/gcloud/reference/projects/)
+  ```
+  # list all projects
+  gcloud projects list
+  # describe a project
+  gcloud projects describe <project id or project number>
+  # create a new project
+  gcloud projects create <some unique id> --labels=environment=dev,owner=ktewary --name=hello-word
+  #modify the name of an existing project
+  gcloud projects update <project id> --name=hello-world-updated
+  # get iam policy
+  gcloud projects get-iam-policy <project id>
+  # set iam policy
+  gcloud projects set-iam-policy hello-world-ktewary policy.json
+  ```
+- quotas
+
 ## Compute Engine
 A  project can have upto 5 VPC instances. Each compute engine instance belongs to one VPC network
 To create a VM instance, go to compute engine > VM instances > create. Pricing depends on region, machine type, boot disk storage space (min is 10 GB)
