@@ -33,3 +33,7 @@ Pricing: https://cloud.google.com/pricing/
 - https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/network
 - https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone
 - travis vs jenkins https://stackoverflow.com/questions/32422264/jenkins-vs-travis-ci-which-one-would-you-use-for-a-open-source-project
+
+## Developer cheat sheets
+https://cheatsheet.dennyzhang.com/cheatsheet-gcp-A4
+https://github.com/gregsramblings/google-cloud-4-words
