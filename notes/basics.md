@@ -56,7 +56,7 @@ d. big data services
 e. Machine learning services
 
 ## Projects and hierarchy
-- organization - requires G-suite integration. If configured, all projects would be under an organization.
+- organization - requires G-suite or cloud identity integration. If configured, all projects would be under an organization.
 - projects - essentially a way to organize the resources. projects are not tied to a particular region or zone, instead the underlying resources do. Project IDs are unique across all projects. That means if any user ever had a project with that ID, you cannot use it. The name of the project can be updated later.
   - [gcloud commands](https://cloud.google.com/sdk/gcloud/reference/projects/)
   ```
