@@ -54,3 +54,18 @@ compute engine(GCE)>container engine(GKE)>app engine(GAE)>google cloud functions
     - multi-zone coverage
     - load balancing
     - rolling updates
+- networking
+  - vm supported protocols TCP, UDP, ICMP
+  - each instance belongs to one VPC network
+- storage
+  - do not use local SSD for storage
+- Migrate VMs
+  - manual
+  - automated - import virtual disks, velostrata, cloudEndure
+- High Availability
+- Billing and costs
+  - per sec billing
+  - preemptible vm
+  - no prepaid contract requirement
+  - inferred instances
+  - longer term use is discounted
