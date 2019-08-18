@@ -1,6 +1,6 @@
 # App Engine
 - PaaS
-- fully managed serverless platform
+- fully managed serverless platform. health-check and scaling is automatically done, OS and security updates are automatically applied.
 - deployed in a particular region, so a regional service. Once a region is set, it can NOT be moved.
 - languages supported - Java, PHP, Node.js, Python, C#, .Net, Ruby and Go
 - Application Versioning
@@ -11,3 +11,5 @@
 - scaling type - manual, basic, automatic
 - instance class 
 - Traffic Migration or Traffic splitting
+- Memcache - memory cache service
+- use cases - web applications, mobile apps
