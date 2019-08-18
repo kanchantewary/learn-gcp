@@ -69,3 +69,7 @@ compute engine(GCE)>container engine(GKE)>app engine(GAE)>google cloud functions
   - no prepaid contract requirement
   - inferred instances
   - longer term use is discounted
+  - machine type recommendations provided by compute engine [rightsizing](https://cloud.google.com/compute/docs/instances/apply-sizing-recommendations-for-instances)
+  - we can change machine type of a stopped instance (TERMINATED). It is not possible to change machine type of a running instance.
+  - committed use discounts, but doesnt require any upfront cost. Refer [this](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts)
+  - 
