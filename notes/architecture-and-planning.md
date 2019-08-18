@@ -1,5 +1,7 @@
 # best practices for planning and defining architecture
 
+https://gcp.solutions/
+
 ## 8 steps for planning/estimating
 1. plan the hierarchy
 org>team folders>projects>resources
