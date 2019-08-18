@@ -17,6 +17,7 @@
   - splitting traffic among two or more versions of a service
 - Memcache - memory cache service
 - use cases - web applications, mobile apps
+- security scan - Cloud Security Scanner. Refer the major security [vulnerabilities](https://www.toptal.com/security/10-most-common-web-security-vulnerabilities)
 
 ## Hello-world tutorial
 ```
