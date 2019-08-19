@@ -12,10 +12,11 @@ Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/wha
 
 - GCP advantages
   - 
-- VPC (Virtual Private Cloud) - a /*global private isolated virtual*/ network partition, that provides managed network functionality. VPC is a global resource. There can be multiple (upto 5) VPCs under a GCP project (/*one is created by default*/).
+- VPC (Virtual Private Cloud) - a /*global private isolated virtual*/ network partition, that provides managed network functionality. VPC is a global resource. There can be multiple (upto 5) VPCs under a GCP project (/*one is created by default*/). A VPC can have multiple sub-networks. A particular subnet can be zonal, or span across multiple zones in a region. When a new VPC is created, all traffic to it's instances are blocked by default, unless there is a explicit firewall rule created to allow it.
   - complete range of managed networking mechanisms e.g. granular ip address ranges, routes, firewalls, VPN, cloud router
   - shared VPC - a VPC shared across multiple projects
   - VPC Peering
+  - routes - mapping of IP range to destination. usage:- proxy server, NAT
 - load balancing
 - DNS - translates requests from domain names to IPv4 or IPv6 ip addresses
 - hybrid cloud connectivity
@@ -25,6 +26,8 @@ Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/wha
   - uses googles edge caches to lower network latency
  - load balancing
  - tiering
- - firewall rule, tags
- - IP Addressing - FQDN, static vs ephemeral ip
+ - firewall rule, tags - rules can be allow or deny. access can be ingress or egress.we can specify source and destination ips, protocol, ports. There are priorities and tie breakers to manage conflicts between multiple rules. by default, all VPC egress (outbound) traffic is allowed, and ingress traffic is blocked.
+ - IP Addressing - FQDN, static vs ephemeral ip. external ips can be static or ephemeral.
+  - static - does not change till it is released
+  - ephemeral - internal ips are ephemeral. they are valid till the VM is start/stopped or restarted
  - DNS Name resolution
