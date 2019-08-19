@@ -13,7 +13,7 @@ Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/wha
 
 - GCP advantages
   - 
-- VPC (Virtual Private Cloud) - a /*global private isolated virtual*/ network partition, that provides managed network functionality. VPC is a global resource. There can be multiple (upto 5) VPCs under a GCP project (/*one is created by default*/). A VPC can have multiple sub-networks. A particular subnet can be zonal, or span across multiple zones in a region. When a new VPC is created, all traffic to it's instances are blocked by default, unless there is a explicit firewall rule created to allow it.
+- VPC (Virtual Private Cloud) - a *global private isolated virtual* network partition, that provides managed network functionality. VPC is a global resource. There can be multiple (upto 5) VPCs under a GCP project (/*one is created by default*/). A VPC can have multiple sub-networks. A particular subnet can be zonal, or span across multiple zones in a region. When a new VPC is created, all traffic to it's instances are blocked by default, unless there is a explicit firewall rule created to allow it.
   - complete range of managed networking mechanisms e.g. granular ip address ranges, routes, firewalls, VPN, cloud router
   - shared VPC - a VPC shared across multiple projects (cross project networking ~XPN). In this case, there would be a host project (which would own the VPC, billing would go towards this project), plus one or multiple service projects which would use the subnets under the said VPC.
   - VPC Peering
