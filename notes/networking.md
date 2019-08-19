@@ -7,6 +7,7 @@ basic terminologies:
 - CIDR - https://searchnetworking.techtarget.com/definition/CIDR
 - bastion host
 - NAT gateway
+- OSI model - OSI stands for Open Systems Interconnection. Refer [this](https://www.geeksforgeeks.org/layers-of-osi-model/)
 
 Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/what-is-ssl-tls-https)
 
@@ -17,14 +18,18 @@ Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/wha
   - shared VPC - a VPC shared across multiple projects (cross project networking ~XPN). In this case, there would be a host project (which would own the VPC, billing would go towards this project), plus one or multiple service projects which would use the subnets under the said VPC.
   - VPC Peering
   - routes - mapping of IP range to destination. usage:- proxy server, NAT
-- load balancing
+- load balancing - provided at different levels of OSI stack
 - DNS - translates requests from domain names to IPv4 or IPv6 ip addresses
 - hybrid cloud connectivity
   - VPN
-  - cloud interconnect
+  - cloud interconnect - provides connectivity between on-premise network and google cloud network - Hybrid Cloud use case.
  - cloud CDN
   - uses googles edge caches to lower network latency
  - load balancing
+  - http/https
+  - SSL proxy
+  - TCP proxy
+  - Network
  - tiering
  - firewall rule, tags - rules can be allow or deny. access can be ingress or egress.we can specify source and destination ips, protocol, ports. There are priorities and tie breakers to manage conflicts between multiple rules. by default, all VPC egress (outbound) traffic is allowed, and ingress traffic is blocked.
  - IP Addressing - FQDN, static vs ephemeral ip. external ips can be static or ephemeral.
