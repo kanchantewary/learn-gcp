@@ -8,6 +8,10 @@
 - NAT gateway - Network Address Translation or NAT, translates source ip x to another ip y. PAT or Port Address Translation is used when there are multiple source ips all mapped to a single destination ip.
 - Proxy - There would be two TCP connections, one from source ip to proxy device, and another from proxy to destination ip
 - OSI model - OSI stands for Open Systems Interconnection. Refer [this](https://www.geeksforgeeks.org/layers-of-osi-model/)
+- CDN - Content Delivery Network. all static content(CSS, Java script, images) from a web page would be routed to a CDN, to serve the client (browser). Refer this [link] (https://youtu.be/dZ5aXGFnxI4)
+  - The host server can serve many more requests, providing faster response
+  - CDN would be residing close to the end user, compared to the host server, thus faster response.
+  - Example vendors - Akamai
 
 Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/what-is-ssl-tls-https)
 
