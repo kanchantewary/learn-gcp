@@ -5,7 +5,8 @@
 - subnetworks, subnetting - https://searchnetworking.techtarget.com/definition/subnet
 - CIDR - https://searchnetworking.techtarget.com/definition/CIDR
 - bastion host
-- NAT gateway
+- NAT gateway - Network Address Translation or NAT, translates source ip x to another ip y. PAT or Port Address Translation is used when there are multiple source ips all mapped to a single destination ip.
+- Proxy - There would be two TCP connections, one from source ip to proxy device, and another from proxy to destination ip
 - OSI model - OSI stands for Open Systems Interconnection. Refer [this](https://www.geeksforgeeks.org/layers-of-osi-model/)
 
 Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/what-is-ssl-tls-https)
@@ -23,11 +24,21 @@ Refer this [link](https://www.websecurity.symantec.com/en/in/security-topics/wha
   - cloud interconnect - provides connectivity between on-premise network and google cloud network - Hybrid Cloud use case.
  - cloud CDN
   - uses googles edge caches to lower network latency
-- load balancing
+- load balancing - internal/external
   - http/https
+    - content based - based on the content type
+    - cross-regional - distributed based on proximity to the user
+    - concepts
+      - forwarding rules
+      - session affinity
   - SSL proxy
-  - TCP proxy
+    - non-http(s)
+  - TCP [proxy](https://youtu.be/jGQTS1CxZTE)
+    - if we can not use http/https and SSL load balancing
+    - use for specific ports only
   - Network
+    - picks an instance based on a hash of source ip, port, destination ip and port, and protocol
+  - internal load balancing - private load balancing is more secure. considers hashing+instance health. It is a pass-through type of load balancing, and not proxy-based.
  - tiering
  - firewall rule, tags - rules can be allow or deny. access can be ingress or egress.we can specify source and destination ips, protocol, ports. There are priorities and tie breakers to manage conflicts between multiple rules. by default, all VPC egress (outbound) traffic is allowed, and ingress traffic is blocked.
 - IP Addressing - FQDN, static vs ephemeral ip. external ips can be static or ephemeral.
