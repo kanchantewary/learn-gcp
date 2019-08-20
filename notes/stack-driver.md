@@ -1,1 +1,21 @@
-#StackDriver
+#StackDriver - acquried by google in 2014, works with major cloud provides, apart from gcp
+- Stackdriver monitoring
+  - two service tiers
+  - can monitor multiple projects in gcp
+  - if we need to monitor AWS projects, add the AWS account to stackdriver account, and it would create AWS connector project for each of them. Do not add GCP resources inside these connector projects.
+  - hosting project - the billable project
+  - metrics
+    - CPU utilization of VM instances - updated once a minute
+    - cloud storage buckets
+    - App Engine standard environment
+  - custom metrics
+    - guage metrics
+    - delta
+    - cumulative
+- Error reporting
+- Trace - incoming request to an application
+  - span - one RPC call
+- Stackdriver Logging
+  - audit logs - permanently stored, no retention period
+    - admin activity logs
+    - data access logs - off by default, except Bigquery. needs to be enabled explicitly
