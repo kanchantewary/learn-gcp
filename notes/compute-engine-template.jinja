@@ -1,0 +1,86 @@
+{#
+Copyright 2016 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+#}
+
+{% set  NETWORK_NAME = "networking101" %}
+
+resources:
+- name: w1-vm
+  type: vm-template.jinja
+  properties:
+    machineType: n1-standard-1
+    zone: us-west1-b
+    network: {{ NETWORK_NAME }}
+    subnetwork: us-west1-s1
+- name: w2-vm
+  type: vm-template.jinja
+  properties:
+    machineType: n1-standard-1
+    zone: us-west1-b
+    network: {{ NETWORK_NAME }}
+    subnetwork: us-west1-s2
+    ip: 10.11.0.100
+- name: e1-vm
+  type: vm-template.jinja
+  properties:
+    machineType: n1-standard-1
+    zone: us-east1-b
+    network: {{ NETWORK_NAME }}
+    subnetwork: us-east1
+- name: eu1-vm
+  type: vm-template.jinja
+  properties:
+    machineType: n1-standard-1
+    zone: europe-west1-d
+    network: {{ NETWORK_NAME }}
+    subnetwork: europe-west1
+- name: asia1-vm
+  type: vm-template.jinja
+  properties:
+    machineType: n1-standard-1
+    zone: asia-east1-b 
+    network: {{ NETWORK_NAME }}
+    subnetwork: asia-east1
+- name: {{ NETWORK_NAME }}
+  type: network-template.jinja
+- name: us-west1-s1
+  type: subnetwork-template.jinja
+  properties:
+    network: {{ NETWORK_NAME }}
+    range: 10.10.0.0/16    
+    region: us-west1
+- name: us-west1-s2
+  type: subnetwork-template.jinja
+  properties:
+    network: {{ NETWORK_NAME }}
+    range: 10.11.0.0/16    
+    region: us-west1
+- name: us-east1
+  type: subnetwork-template.jinja
+  properties:
+    network: {{ NETWORK_NAME }}
+    range: 10.20.0.0/16    
+    region: us-east1
+- name: europe-west1
+  type: subnetwork-template.jinja
+  properties:
+    network: {{ NETWORK_NAME }}
+    range: 10.30.0.0/16    
+    region: europe-west1
+- name: asia-east1
+  type: subnetwork-template.jinja
+  properties:
+    network: {{ NETWORK_NAME }}
+    range: 10.40.0.0/16    
+    region: asia-east1
