@@ -12,7 +12,7 @@ Google Cloud Platform - data engineer ceritification
 - https://www.coursera.org/learn/preparing-cloud-professional-cloud-architect-exam
 - https://www.coursera.org/learn/gcp-fundamentals
 - https://www.coursera.org/specializations/gcp-architecture
-- 
+- https://github.com/ddneves/awesome-gcp-certifications
 
 
 ## Bookmarks from coursera-gcp-ml
