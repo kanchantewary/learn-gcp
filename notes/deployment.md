@@ -1,4 +1,11 @@
 # Cloud deployment manager
+
+## Resources
+https://medium.com/google-cloud/2018-google-deployment-manager-5ebb8759a122
+https://github.com/schweikert/gcp-infra-as-code
+https://github.com/GoogleCloudPlatform/deploymentmanager-samples
+
+## Concepts
 - deployment - a deployment is a collection of resources which are deployed and managed together
 - config file written in yaml. a configuration file contains name, type and properties for each resource entry
   - define dependencies
