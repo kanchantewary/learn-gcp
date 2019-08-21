@@ -1,10 +1,10 @@
 # Cloud deployment manager
 
 ## Resources
-https://cloud.google.com/deployment-manager/docs/
-https://github.com/GoogleCloudPlatform/deploymentmanager-samples
-https://medium.com/google-cloud/2018-google-deployment-manager-5ebb8759a122
-https://github.com/schweikert/gcp-infra-as-code
+1. *[Official Documentation] (https://cloud.google.com/deployment-manager/docs/)
+2. *[Github samples] (https://github.com/GoogleCloudPlatform/deploymentmanager-samples)
+3. *[Blog] (https://medium.com/google-cloud/2018-google-deployment-manager-5ebb8759a122)
+4. *https://github.com/schweikert/gcp-infra-as-code
 
 
 ## Concepts
