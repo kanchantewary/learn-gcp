@@ -2,7 +2,14 @@
 - Authentication
   - standard flow
     - End user accounts - needed if we need to differenciate between people using same service account
-    - service accounts - universal way of accessing GCP resources. Roles can be assigned to a service account
+      - OAuth 2.0
+        - Resource Owner
+        - Resource Server
+        - client
+        - Authorization server        
+    - service accounts - associated with a particular project, and not an individual user. universal way of accessing GCP resources. Roles can be assigned to a service account
+      - GOOGLE APPLICATION CREDENTIALS
+      - APPLICATION DEFAULT CREDENTIALS
   - API keys
 -Authorization
   - Cloud IAM
