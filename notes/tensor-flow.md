@@ -1,6 +1,7 @@
 # Tensor Flow
 ## Resources
 https://developers.google.com/machine-learning/crash-course/
+https://colab.research.google.com/notebooks/welcome.ipynb
 
 estimators - high level OOP API
 tf.layers, tf.losses, tf.metrics - reusable libraries
