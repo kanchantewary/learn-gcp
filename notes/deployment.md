@@ -18,4 +18,4 @@ https://github.com/GoogleCloudPlatform/deploymentmanager-samples
   - waiter
   
 - Alternative products to Cloud deployment manager
-  - Ansible, chef, Terraform, AWS CloudFormation
+  - Ansible, chef, Terraform, AWS CloudFormation, Azure Resource Manager
