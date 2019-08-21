@@ -21,3 +21,7 @@
   
 - Alternative products to Cloud deployment manager
   - Ansible, chef, Terraform, AWS CloudFormation, Azure Resource Manager
+
+# Cloud End points
+- Extensible Service Proxy Container 
+- API container and service proxy must be in the same machine instance, to ensure there is no network access.
