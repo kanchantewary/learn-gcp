@@ -1,3 +1,12 @@
+# Identity concepts
+- Authentication
+  - standard flow
+    - End user accounts - needed if we need to differenciate between people using same service account
+    - service accounts - universal way of accessing GCP resources. Roles can be assigned to a service account
+  - API keys
+-Authorization
+  - Cloud IAM
+
 # Identity and Access Management
 Refer this [next video](https://youtu.be/ZMC8Ng3E3LQ)
 cloud IAM  - define who has what access to which resource
