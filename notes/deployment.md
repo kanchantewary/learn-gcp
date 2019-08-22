@@ -5,7 +5,7 @@
 - [Github samples](https://github.com/GoogleCloudPlatform/deploymentmanager-samples)
 - [Blog](https://medium.com/google-cloud/2018-google-deployment-manager-5ebb8759a122)
 - [Github samples](https://github.com/schweikert/gcp-infra-as-code)
-
+- [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 
 ## Concepts
 - deployment - a deployment is a collection of resources which are deployed and managed together
