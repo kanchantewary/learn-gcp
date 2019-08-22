@@ -40,3 +40,15 @@ gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone $ZON
 `gcloud config list`
 6. list components 
 `gcloud components list`
+
+# GSP101 Google Cloud Essential Skills: Challenge Lab
+- Your challenge is to deploy the site in the public cloud by completing the tasks below. You will use a simple Apache web server as a placeholder for the new site in this exercise. 
+
+1. Create a Linux VM Instance
+Create a Linux virtual machine, name it "apache" and specify the zone as "us-central1-a".
+2. Enable Public Access to VM Instance
+While creating the Linux instance, make sure to apply the appropriate firewall rules so that potential customers can find your new product.
+3. Running a Basic Apache Web Server
+A virtual machine instance on Google Compute Engine can be controlled like any standard Linux server. Deploy a simple Apache web server (a placeholder for the new product site) to learn the basics of running a server on a virtual machine instance.
+
+# GSP301 - 
