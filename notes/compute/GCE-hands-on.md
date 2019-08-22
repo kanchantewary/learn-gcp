@@ -20,3 +20,23 @@ ps auwx | grep nginx
 7. ssh into the vm
 `gcloud compute ssh gcelab2 --zone [YOUR_ZONE]`
 8. 
+
+# Getting Started with Cloud Shell & gcloud
+1. 
+`gcloud compute project-info describe --project <your_project_ID>`
+2. initialize gcloud sdk
+`gcloud init`
+3. create a vm
+```
+export PROJECT_ID=<your_project_ID>
+export ZONE=<your_zone>
+echo $PROJECT_ID
+echo $ZONE
+gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone $ZONE
+```
+4. get help
+`gcloud help config`
+5. view list of configurations
+`gcloud config list`
+6. list components 
+`gcloud components list`
