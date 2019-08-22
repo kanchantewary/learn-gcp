@@ -4,7 +4,7 @@
 2. list the project ID
 `gcloud config list project`
 3. Resources that live in a zone are referred to as zonal resources. Virtual machine Instances and persistent disks live in a zone. To attach a persistent disk to a virtual machine instance, both resources must be in the same zone. Similarly, if you want to assign a static IP address to an instance, the instance must be in the same region as the static IP.
-4. create a vm from console
+4. create a vm from console. now, ssh into it.
 5. Install a NGINX web server
 ```
 sudo su -
@@ -15,16 +15,16 @@ apt-get install nginx -y
 # check if nginx server is running   
 ps auwx | grep nginx
 ```
-6. create a vm from gcloud
+6. modify the vm firewall rule to allow http traffic. Now, if we connect to the external ip, we can see the prompt showing nginx.
+7. create a vm from gcloud
 `gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone [your_zone]`
-7. ssh into the vm
+8. ssh into the vm
 `gcloud compute ssh gcelab2 --zone [YOUR_ZONE]`
-8. 
 
 # Getting Started with Cloud Shell & gcloud
 1. 
 `gcloud compute project-info describe --project <your_project_ID>`
-2. initialize gcloud sdk
+2. initialize gcloud sdk. this requires cloud resource manager API to be enabled
 `gcloud init`
 3. create a vm
 ```
