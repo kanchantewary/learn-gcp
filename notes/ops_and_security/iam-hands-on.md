@@ -22,3 +22,9 @@ includedPermissions:
 - [PERMISSION_1]
 - [PERMISSION_2]
 ```
+  - run pointing to the file
+  ```
+  gcloud iam roles create editor --project $DEVSHELL_PROJECT_ID --file role-definition.yaml
+  but this is not working - error: You don't have permission to create a role in projects/gcpcourse-01
+  ```
+  
