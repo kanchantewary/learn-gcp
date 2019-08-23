@@ -25,6 +25,14 @@ includedPermissions:
   - run pointing to the file
   ```
   gcloud iam roles create editor --project $DEVSHELL_PROJECT_ID --file role-definition.yaml
-  but this is not working - error: You don't have permission to create a role in projects/gcpcourse-01
   ```
+# Service Accounts
+- A service account is a special Google account that belongs to your application or a virtual machine (VM) instead of an individual end user. 
+- When you create a new Cloud project using GCP Console and if Compute Engine API is enabled for your project, a Compute Engine Service account is created for you by default. 
+- If your project contains an App Engine application, the default App Engine service account is created in your project by default.
   
+```
+# Service Accounts and Roles: Fundamentals
+gcloud iam service-accounts create my-sa-123 --display-name "my service account"
+# grant roles to the service account
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member serviceAccount:my-sa-123@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/editor
