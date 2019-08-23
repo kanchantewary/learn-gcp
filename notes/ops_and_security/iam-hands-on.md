@@ -36,3 +36,36 @@ includedPermissions:
 gcloud iam service-accounts create my-sa-123 --display-name "my service account"
 # grant roles to the service account
 gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member serviceAccount:my-sa-123@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role roles/editor
+```
+- steps
+  1. create a service account with two roles: BigQuery Data Viewer and BigQuery User
+  2. create a vm instance and add the new service account to it. If already running, you need to stop it first, to be able to update it.
+  3. write a python script to run in bigquery. it should use the new service account
+  ```
+from google.auth import compute_engine
+from google.cloud import bigquery
+
+credentials = compute_engine.Credentials(
+    service_account_email='YOUR_SERVICE_ACCOUNT')
+
+query = '''
+SELECT
+  year,
+  COUNT(1) as num_babies
+FROM
+  publicdata.samples.natality
+WHERE
+  year > 2000
+GROUP BY
+  year
+'''
+
+client = bigquery.Client(
+    project='YOUR_PROJECT_ID',
+    credentials=credentials)
+print(client.query(query).to_dataframe())
+```
+  4. ssh into the vm and install google-cloud-bigquery
+  5. run the query
+  
+  
