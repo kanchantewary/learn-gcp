@@ -41,7 +41,7 @@ gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member serviceAcco
   1. create a service account with two roles: BigQuery Data Viewer and BigQuery User
   2. create a vm instance and add the new service account to it. If already running, you need to stop it first, to be able to update it.
   3. write a python script to run in bigquery. it should use the new service account
-  ```
+```
 from google.auth import compute_engine
 from google.cloud import bigquery
 
@@ -66,6 +66,10 @@ client = bigquery.Client(
 print(client.query(query).to_dataframe())
 ```
   4. ssh into the vm and install google-cloud-bigquery
+  `sudo pip install google-cloud-bigquery`
+  5. install pandas
+  `sudo pip install pandas`
   5. run the query
+  `python query.py`
   
   
