@@ -73,7 +73,8 @@ kubectl get deployments
 
 ```
 # GSP053
-Refer link (https://google.qwiklabs.com/focuses/639?parent=catalog)
+- Refer link (https://google.qwiklabs.com/focuses/639?parent=catalog) 
+- https://github.com/googlecodelabs/orchestrate-with-kubernetes
 
 
 
