@@ -72,8 +72,10 @@ Look for Spec > containers > image and change the version number to v2:
 kubectl get deployments
 
 ```
+# GSP053
+Refer link (https://google.qwiklabs.com/focuses/639?parent=catalog)
 
 
-```
+
 
 
