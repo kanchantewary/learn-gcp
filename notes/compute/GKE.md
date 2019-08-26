@@ -1,4 +1,6 @@
 # Google Kubernetes Engine
+
+Refer https://cloud.google.com/solutions/scope-and-size-kubernetes-engine-clusters
 - nodepool
 - kubernetes labels
 - node taints
